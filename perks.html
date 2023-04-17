@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Link to the "Fugaz One" font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+
+    <title>Perks</title>
+    <style>
+        body {
+            font-family: 'Bebas Neue';
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #a1d9ff, #60b3e3, #a1d9ff);
+            /* Water-like background */
+            overflow: auto;
+            /* Enable scrolling */
+            position: relative;
+            /* For absolute positioning of waterfall */
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 10vw;
+            margin: 0;
+        }
+
+        .pool-section {
+            margin-bottom: 40px;
+        }
+
+        .pool-header {
+            font-size: 6vw;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #4a4a4a;
+            cursor: pointer;
+            /* Add a border to the pool header */
+            padding: 10px;
+            /* Add some padding inside the border */
+            transition: border-color 0.3s ease-in-out;
+            /* Transition for smooth hover effect */
+        }
+
+        .pool-header:hover {
+            border-color: #60b3e3;
+            /* Change border color on hover */
+        }
+
+
+        .perk-name {
+            font-size: 22px;
+            /* Increase font size */
+            font-weight: bold;
+            text-align: center;
+            /* Center the text */
+            margin-bottom: 10px;
+            /* Add some space below the perk name */
+            width: auto;
+        }
+
+        .perk-entry {
+            padding: 15px;
+            width: 75%;
+            margin: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 5px solid transparent;
+            position: relative;
+            background-color: #4ba8e6ee;
+            /* Darker blue background color */
+            overflow: hidden;
+            /* Hide the ripple effect that goes beyond the perk entry boundary */
+        }
+
+        .perk-entry::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: rgba(255, 255, 255, 0.1);
+            /* Color of the ripple */
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.4s ease-out;
+            pointer-events: none;
+            /* Prevent interaction with the ripple */
+        }
+
+        .perk-entry:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .perk-name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .perk-description {
+            margin-top: 5px;
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .perk-details {
+            font-size: 12px;
+            color: #7a7a7a;
+            white-space: pre-line;
+            /* Preserve newlines in details */
+        }
+
+        /* Define border colors for each rarity */
+        .rare {
+            border-color: #14b1f5;
+        }
+
+        .epic {
+            border-color: #e619fc;
+        }
+
+        .legendary {
+            border-color: #d4b20d;
+        }
+
+        .greed {
+            border-color: #ba2902;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @keyframes waveAnimation {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .wave-container {
+            position: fixed;
+            /* Make wave stay in place */
+            bottom: 0;
+            left: 0;
+            width: 200%;
+
+            overflow: hidden;
+            z-index: -1;
+            /* Place wave behind perks */
+        }
+
+        .wave {
+            fill: #60b3e3;
+            /* Wave color */
+            animation: waveAnimation 15s linear infinite;
+            /* Wave animation */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .indicator-icon {
+            font-size: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+            /* Align icon with the text */
+        }
+
+        .pool-header {
+            font-size: 6vw;
+            margin-bottom: 10px;
+            text-align: center;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+
+        .pool-header-content {
+            display: inline-block;
+            /* Make the div an inline element */
+            color: #4a4a4a;
+            border: 5px solid #4a4a4a;
+            /* Add a border to the pool header content */
+            padding: 10px;
+            /* Add some padding inside the border */
+            transition: border-color 0.3s ease-in-out;
+            /* Transition for smooth hover effect */
+            vertical-align: middle;
+        }
+
+        .pool-header:hover .pool-header-content {
+            border-color: #60b3e3;
+            /* Change border color on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Perks</h1>
+    <div class="container" id="perksContainer"></div>
+    <!-- Wave container -->
+    <div class="wave-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 300" preserveAspectRatio="none" class="wave">
+            <path id="wavePath">
+                <animate attributeName="d" dur="15s" repeatCount="indefinite"
+                    values="M0,200 C200,50 200,350 400,200 C600,50 600,350 800,200 C1000,50 1000,350 1200,200 C1400,50 1400,350 1600,200 V300 H0 Z;
+                         M0,200 C200,100 200,300 400,200 C600,100 600,300 800,200 C1000,100 1000,300 1200,200 C1400,100 1400,300 1600,200 V300 H0 Z;
+                         M0,200 C200,50 200,350 400,200 C600,50 600,350 800,200 C1000,50 1000,350 1200,200 C1400,50 1400,350 1600,200 V300 H0 Z" />
+            </path>
+        </svg>
+    </div>
+
+    <script>
+        fetch('data.json')
+            .then(response => response.json())
+            .then(perksData => {
+                const versionNumber = "V1772";
+                const perksList = Object.values(perksData[versionNumber].perks.pools).flatMap(pool =>
+                    ["Rare", "Epic", "Legendary", "Greed"].flatMap(rarity =>
+                        pool[rarity].flatMap(perk =>
+                            Object.entries(perk).map(([name, data]) => ({
+                                name,
+                                description: data.description,
+                                details: data.details,
+                                rarity: rarity.toLowerCase(),
+                                pool: Object.keys(perksData[versionNumber].perks.pools).find(poolName => perksData[versionNumber].perks.pools[poolName] === pool)
+                            }))
+                        )
+                    )
+                );
+
+                // Group perks by pool
+                const perksByPool = perksList.reduce((acc, perk) => {
+                    if (!acc[perk.pool]) {
+                        acc[perk.pool] = [];
+                    }
+                    acc[perk.pool].push(perk);
+                    return acc;
+                }, {});
+
+                // Generate pool sections and perk entries
+                const container = document.getElementById("perksContainer");
+                Object.entries(perksByPool).forEach(([poolName, perks]) => {
+                    // Pool section
+                    const poolSection = document.createElement("div");
+                    poolSection.className = "pool-section";
+
+                    // Pool header
+                    const poolHeader = document.createElement("h2");
+                    poolHeader.className = "pool-header";
+                    const poolHeaderContent = document.createElement("div");
+                    poolHeaderContent.className = "pool-header-content";
+                    poolHeader.appendChild(poolHeaderContent);
+
+                    const indicatorIcon = document.createElement("span");
+                    indicatorIcon.className = "indicator-icon";
+                    indicatorIcon.textContent = "▶"; // Change initial icon to "▶"
+                    poolHeaderContent.appendChild(indicatorIcon);
+
+                    // Pool header text
+                    const poolHeaderText = document.createTextNode(poolName);
+                    poolHeaderContent.appendChild(poolHeaderText);
+                    poolHeader.addEventListener("click", () => {
+                        // Toggle visibility of perk entries
+                        const perkEntries = poolSection.getElementsByClassName("perk-entry");
+                        const isHidden = Array.from(perkEntries).some(entry => entry.classList.contains("hidden"));
+                        Array.from(perkEntries).forEach(entry => {
+                            entry.classList.toggle("hidden");
+                        });
+
+                        // Update the indicator icon based on the visibility state
+                        indicatorIcon.textContent = isHidden ? "▼" : "▶"; // Update icon based on new state
+                    });
+                    poolSection.appendChild(poolHeader);
+
+                    // Perk entries
+                    perks.forEach(perk => {
+                        const perkEntry = document.createElement("div");
+                        perkEntry.className = `perk-entry ${perk.rarity} hidden`;
+
+                        // On perk entry click
+                        perkEntry.addEventListener('click', () => {
+                            perkDescription.classList.toggle('hidden');
+                            perkDetails.classList.toggle('hidden');
+                        });
+
+                        const perkName = document.createElement("div");
+                        perkName.className = "perk-name";
+                        perkName.textContent = perk.name;
+                        perkEntry.appendChild(perkName);
+
+                        // Initially hide perk description
+                        const perkDescription = document.createElement("div");
+                        perkDescription.className = "perk-description hidden";
+                        perkDescription.textContent = perk.description;
+                        perkEntry.appendChild(perkDescription);
+
+                        // Initially hide perk details
+                        const perkDetails = document.createElement("div");
+                        perkDetails.className = "perk-details hidden";
+                        perkDetails.textContent = perk.details;
+                        perkEntry.appendChild(perkDetails);
+
+                        poolSection.appendChild(perkEntry);
+                    });
+
+                    container.appendChild(poolSection);
+                });
+            });
+    </script>
+</body>
+
+</html>
