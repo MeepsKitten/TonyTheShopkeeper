@@ -67,7 +67,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Tony the shopkeeper',
+      title: 'Tony\'s Archive',
       selectedVersion: "NOT UPDATED",
       versions: [],
       gameinfo: null,
@@ -95,7 +95,7 @@ export default {
 <style scoped>
 /* Set maximum width, padding, and font size for the dropdown */
 .v-input {
-  max-width: 200px !important;
+  max-width: 30% !important;
   /* Adjust the value based on your preference */
   padding-top: 30px !important;
   /* Adjust the value based on your preference */

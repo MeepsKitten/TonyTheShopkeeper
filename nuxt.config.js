@@ -1,5 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -7,7 +8,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - tony-the-shopkeeper',
-    title: 'tony-the-shopkeeper',
+    title: 'Tony\'s Archive',
     htmlAttrs: {
       lang: 'en',
     },
@@ -17,11 +18,15 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"}]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    'assets/global.css'
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
