@@ -3,12 +3,8 @@
         <div class="header-container">
             <h1>Perks</h1>
         </div>
-        <v-autocomplete label="Search Perks" :items="allPerkNames" v-model="selectedPerk"
-            @change="scrollToPerk"
-            solo
-            clearable
-            color="#60b3e3"
-            class="SearchBar"
+        <v-autocomplete ref="searchInput" label="Search Perks" :items="allPerkNames" v-model="selectedPerk"
+            @change="scrollToPerk" solo clearable color="#60b3e3" class="SearchBar"
             append-icon="mdi-magnify"></v-autocomplete>
         <v-expansion-panels v-if="perksData" multiple v-model="activePanels">
             <v-expansion-panel v-for="(perksByRarity, pool) in perksData.perks.pools" :key="pool" :ref="pool">
@@ -88,7 +84,7 @@ export default {
             // Remove spaces and special characters to create a valid ID
             return perkName.replace(/[^a-zA-Z0-9]/g, '_');
         },
-        
+
         scrollToPerk(perkName) {
             if (!perkName || !this.perksData) return;
 
@@ -112,33 +108,32 @@ export default {
 
             // Use the $nextTick method to wait for the DOM to update
             this.$nextTick(() => {
-    setTimeout(() => {
-      // Determine the perk element
-      const perkElementId = this.sanitizeId(perkName);
-      const perkElement = document.getElementById(perkElementId);
+                setTimeout(() => {
+                    // Determine the perk element
+                    const perkElementId = this.sanitizeId(perkName);
+                    const perkElement = document.getElementById(perkElementId);
 
-      if (perkElement) {
-        // Calculate the top position of the perk element with an offset (e.g., 50 pixels)
-        const topPosition = perkElement.getBoundingClientRect().top + window.pageYOffset - 500;
+                    if (perkElement) {
+                        // Calculate the top position of the perk element with an offset (e.g., 50 pixels)
+                        const topPosition = perkElement.getBoundingClientRect().top + window.pageYOffset - 500;
 
-        // Scroll to the adjusted position
-        window.scrollTo({ top: topPosition, behavior: 'smooth' });
+                        // Scroll to the adjusted position
+                        window.scrollTo({ top: topPosition, behavior: 'smooth' });
 
-        // Add the flash-glow class to the perk element
-        perkElement.classList.add('flash-glow');
+                        // Add the flash-glow class to the perk element
+                        perkElement.classList.add('flash-glow');
 
-        // Remove the flash-glow class after a certain duration (e.g., 5 seconds)
-        setTimeout(() => {
-          perkElement.classList.remove('flash-glow');
-        }, 5000);
-      } else {
-        console.log('Could not find perk element:', perkName);
-      }
-    }, 300);
-  });
+                        // Remove the flash-glow class after a certain duration (e.g., 5 seconds)
+                        setTimeout(() => {
+                            perkElement.classList.remove('flash-glow');
+                        }, 5000);
+                    } else {
+                        console.log('Could not find perk element:', perkName);
+                    }
+                    this.$refs.searchInput.$refs.input.blur();
+                }, 400);
+            });
         },
-
-
 
         getRarityGlowClass(rarity) {
             return `perk-card rarity-${rarity.toLowerCase()}`;
