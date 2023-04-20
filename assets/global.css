@@ -1,0 +1,8 @@
+.number-highlight {
+    /* Change to the color you prefer */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 1); /* Increase the blur radius and opacity */
+}
+
+.perk-header {
+    font-size: 25px; /* Change to the desired font size */
+}
