@@ -48,7 +48,6 @@ export default {
 
     created() {
         //log the selected version
-        console.log(data);
 
         this.perksData = data[this.selectedVersion];
     },
