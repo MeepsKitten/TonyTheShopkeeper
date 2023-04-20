@@ -44,6 +44,7 @@
 
 <script>
 import { computed } from 'vue'
+import data from '~/assets/data/data.json';
 export default {
   name: 'DefaultLayout',
   data() {
@@ -80,14 +81,13 @@ export default {
 
   created() {
     // Fetch data when the layout is mounted
-    this.$axios.$get('/data/data.json').then((fetchedData) => {
-      this.versions = Object.keys(fetchedData);
-      this.gameinfo = fetchedData;
-      // Automatically select the first version if available
-      if (this.versions.length > 0) {
-        this.selectedVersion = this.versions[0];
-      }
-    });
+    // Use the imported data directly
+    this.versions = Object.keys(data);
+    this.gameinfo = data;
+    if (this.versions.length > 0) {
+      this.selectedVersion = this.versions[0];
+      //this.onVersionChange();
+    }
   },
 }
 </script>

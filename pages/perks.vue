@@ -1,13 +1,16 @@
 <template>
     <div>
-        <div class="header-container"><h1>Perks</h1></div>
-        <v-expansion-panels v-if="perksData" multiple >
-            <v-expansion-panel v-for="(perksByRarity, pool) in perksData.perks.pools" :key="pool" >
+        <div class="header-container">
+            <h1>Perks</h1>
+        </div>
+        <v-expansion-panels v-if="perksData" multiple>
+            <v-expansion-panel v-for="(perksByRarity, pool) in perksData.perks.pools" :key="pool">
                 <v-expansion-panel-header class="pool-header">{{ pool }}</v-expansion-panel-header>
                 <v-expansion-panel-content>
                     <div v-for="(perks, rarity) in perksByRarity" :key="rarity">
                         <v-expansion-panels multiple>
-                            <v-expansion-panel v-for="perkObj in perks" :key="Object.keys(perkObj)[0]" :class="getRarityGlowClass(rarity)">
+                            <v-expansion-panel v-for="perkObj in perks" :key="Object.keys(perkObj)[0]"
+                                :class="getRarityGlowClass(rarity)">
                                 <v-expansion-panel-header class="perk-header">
                                     {{ Object.keys(perkObj)[0] }}
                                 </v-expansion-panel-header>
@@ -15,11 +18,11 @@
                                 <v-expansion-panel-content>
                                     <!-- Display formatted perk description -->
                                     <div v-if="perkObj[Object.keys(perkObj)[0]].description"
-                                        v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].description, true, 'Description',rarity)">
+                                        v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].description, true, 'Description', rarity)">
                                     </div>
                                     <!-- Display formatted perk details -->
                                     <div v-if="perkObj[Object.keys(perkObj)[0]].details"
-                                        v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].details, true, 'Details',rarity)">
+                                        v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].details, true, 'Details', rarity)">
                                     </div>
                                 </v-expansion-panel-content>
 
@@ -38,30 +41,25 @@
   
   
 <script>
-import { watch } from 'vue';
+import data from '~/assets/data/data.json';
 export default {
 
     inject: ['selectedVersion'],
 
     created() {
         //log the selected version
-        console.log(this.selectedVersion);
-        this.perksData = this.data[this.selectedVersion];
+        console.log(data);
+
+        this.perksData = data[this.selectedVersion];
     },
 
     data() {
         return {
-            versions: [],
             perksData: null,
             isLoading: false,
         };
     },
-    async asyncData({ $axios }) {
-        const data = await $axios.$get('/data/data.json');
-        const versions = Object.keys(data);
-        return { versions, data };
-    },
-    methods: {       
+    methods: {
         getRarityGlowClass(rarity) {
             return `perk-card rarity-${rarity.toLowerCase()}`;
         },
@@ -82,17 +80,17 @@ export default {
         },
 
         highlightNumbers(text, isList, header = '', rarity = '') {
-      // Determine the appropriate class based on rarity
-      const className = `number-highlight-${rarity.toLowerCase()}`;
+            // Determine the appropriate class based on rarity
+            const className = `number-highlight-${rarity.toLowerCase()}`;
 
-      // Use regular expression to match numbers and wrap them in a span element with the appropriate class
-      const highlightedText = text.replace(/(\d+)/g, `<span class="${className}">$1</span>`);
+            // Use regular expression to match numbers and wrap them in a span element with the appropriate class
+            const highlightedText = text.replace(/(\d+)/g, `<span class="${className}">$1</span>`);
 
-      // If the text is a list, wrap it with <ul> tags
-      return isList
-        ? `<strong>${header}:</strong><ul><li>${highlightedText.split('*').filter(line => line.trim()).join('</li><li>')}</li></ul>`
-        : highlightedText;
-    },
+            // If the text is a list, wrap it with <ul> tags
+            return isList
+                ? `<strong>${header}:</strong><ul><li>${highlightedText.split('*').filter(line => line.trim()).join('</li><li>')}</li></ul>`
+                : highlightedText;
+        },
 
     },
 };
@@ -104,77 +102,78 @@ export default {
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-  }
+}
 
 .number-highlight {
     width: 200px;
-      height: 200px;
+    height: 200px;
 
-      /* Set border radius to 50% to create an ellipse */
-      border-radius: 100%;
+    /* Set border radius to 50% to create an ellipse */
+    border-radius: 100%;
 
-      /* Set the background color of the ellipse */
-      background-color: #60b3e363;
+    /* Set the background color of the ellipse */
+    background-color: #60b3e363;
 
-      /* Add a blur effect to the ellipse */
-      box-shadow: 0 0 20px 0px #60b3e3;
+    /* Add a blur effect to the ellipse */
+    box-shadow: 0 0 20px 0px #60b3e3;
 }
-.number-highlight-greed
-{
+
+.number-highlight-greed {
     width: 200px;
-      height: 200px;
+    height: 200px;
 
-      /* Set border radius to 50% to create an ellipse */
-      border-radius: 100%;
+    /* Set border radius to 50% to create an ellipse */
+    border-radius: 100%;
 
-      /* Set the background color of the ellipse */
-      background-color: #ff00002d;
+    /* Set the background color of the ellipse */
+    background-color: #ff00002d;
 
-      /* Add a blur effect to the ellipse */
-      box-shadow: 0 0 20px 0px #ff0000;
+    /* Add a blur effect to the ellipse */
+    box-shadow: 0 0 20px 0px #ff0000;
 }
-.number-highlight-epic
-{
+
+.number-highlight-epic {
     width: 200px;
-      height: 200px;
+    height: 200px;
 
-      /* Set border radius to 50% to create an ellipse */
-      border-radius: 100%;
+    /* Set border radius to 50% to create an ellipse */
+    border-radius: 100%;
 
-      /* Set the background color of the ellipse */
-      background-color: #b300b338;
+    /* Set the background color of the ellipse */
+    background-color: #b300b338;
 
-      /* Add a blur effect to the ellipse */
-      box-shadow: 0 0 20px 0px #b300b3;
+    /* Add a blur effect to the ellipse */
+    box-shadow: 0 0 20px 0px #b300b3;
 }
-.number-highlight-legendary
-{
+
+.number-highlight-legendary {
     width: 200px;
-      height: 200px;
+    height: 200px;
 
-      /* Set border radius to 50% to create an ellipse */
-      border-radius: 100%;
+    /* Set border radius to 50% to create an ellipse */
+    border-radius: 100%;
 
-      /* Set the background color of the ellipse */
-      background-color: #ffff0027;
+    /* Set the background color of the ellipse */
+    background-color: #ffff0027;
 
-      /* Add a blur effect to the ellipse */
-      box-shadow: 0 0 20px 0px #ffff00;
+    /* Add a blur effect to the ellipse */
+    box-shadow: 0 0 20px 0px #ffff00;
 }
-.number-highlight-rare
-{
+
+.number-highlight-rare {
     width: 200px;
-      height: 200px;
+    height: 200px;
 
-      /* Set border radius to 50% to create an ellipse */
-      border-radius: 100%;
+    /* Set border radius to 50% to create an ellipse */
+    border-radius: 100%;
 
-      /* Set the background color of the ellipse */
-      background-color: #0000ff5b;
+    /* Set the background color of the ellipse */
+    background-color: #0000ff5b;
 
-      /* Add a blur effect to the ellipse */
-      box-shadow: 0 0 20px 0px #0000ff;
+    /* Add a blur effect to the ellipse */
+    box-shadow: 0 0 20px 0px #0000ff;
 }
+
 .perk-card {
     border-radius: 10px;
     margin: 13px;
@@ -209,11 +208,12 @@ export default {
 }
 
 .perk-header {
-    font-size: 25px; /* Change to the desired font size */
+    font-size: 25px;
+    /* Change to the desired font size */
 }
 
 .pool-header {
-    font-size: 35px; /* Change to the desired font size */
-}
-</style>
+    font-size: 35px;
+    /* Change to the desired font size */
+}</style>
   
