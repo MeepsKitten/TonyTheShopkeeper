@@ -68,6 +68,11 @@ export default {
           title: 'Weapon Mods',
           to: '/wmods',
         },
+        {
+          icon: 'mdi-bomb',
+          title: 'Grenade Mods',
+          to: '/gmods',
+        },
       ],
       miniVariant: false,
       right: true,
