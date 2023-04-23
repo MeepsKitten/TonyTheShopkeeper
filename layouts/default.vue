@@ -23,12 +23,12 @@
     </v-app-bar>
     <v-main>
       <div class="wave-container">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 300" preserveAspectRatio="none" class="wave">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" preserveAspectRatio="none" class="wave">
         <path id="wavePath">
           <animate attributeName="d" dur="15s" repeatCount="indefinite"
-            values="M0,200 C200,50 200,350 400,200 C600,50 600,350 800,200 C1000,50 1000,350 1200,200 C1400,50 1400,350 1600,200 V300 H0 Z;
-                           M0,200 C200,100 200,300 400,200 C600,100 600,300 800,200 C1000,100 1000,300 1200,200 C1400,100 1400,300 1600,200 V300 H0 Z;
-                           M0,200 C200,50 200,350 400,200 C600,50 600,350 800,200 C1000,50 1000,350 1200,200 C1400,50 1400,350 1600,200 V300 H0 Z" />
+            values="M0,200 C200,50 200,350 400,200 C600,50 600,350 800,200 C1000,50 1000,350 1200,200 C1400,50 1400,350 1600,200 V500 H0 Z;
+                           M0,200 C200,100 200,300 400,200 C600,100 600,300 800,200 C1000,100 1000,300 1200,200 C1400,100 1400,300 1600,200 V500 H0 Z;
+                           M0,200 C200,50 200,350 400,200 C600,50 600,350 800,200 C1000,50 1000,350 1200,200 C1400,50 1400,350 1600,200 V500 H0 Z" />
         </path>
       </svg>
     </div>
@@ -125,14 +125,12 @@ export default {
 
 .wave-container {
   position: fixed;
-  /* Make wave stay in place */
   bottom: 0;
   left: 0;
   width: 200%;
-
+  height: 50%; /* Adjust the height of the wave container */
   overflow: hidden;
-  z-index: 1;
-  /* Place wave behind perks */
+  z-index: -0.5;
 }
 
 .wave {
