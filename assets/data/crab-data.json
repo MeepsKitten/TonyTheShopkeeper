@@ -1,0 +1,1590 @@
+{
+    "V1772": {
+        "perks": {
+            "pools": {
+                "Critical": {
+                    "Rare": [
+                        {
+                            "Critical Thinking": {
+                                "description": "Critical hits deal more damage but non critical hits deal less damage",
+                                "details": "* Critical hits deal 100% more damage but non critical hits deal 20% less damage\n* Tag: Critical. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        }
+                    ],
+                    "Epic": [],
+                    "Legendary": [],
+                    "Greed": []
+                },
+                "Damage": {
+                    "Rare": [
+                        {
+                            "Sonic Boom": {
+                                "description": "Reloading damages and knocks back nearby enemies",
+                                "details": "* Reloading deals 200 damage and knocks back nearby enemies\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 2 seconds"
+                            }
+                        },
+                        {
+                            "Sharp Claws": {
+                                "description": "Melee damage increased",
+                                "details": "* Melee damage increased by 100% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "FMJ": {
+                                "description": "Damage increased to armored enemies",
+                                "details": "* Damage increased by 50% to armored enemies\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Damage Combo": {
+                                "description": "Damage increased depending on your current combo",
+                                "details": "* Damage increased by 20% per combo level\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Power Armor": {
+                                "description": "Damage increased for each equipped armor plate",
+                                "details": "* Damage increased by 50% for each equipped armor plate\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Eagle Eye": {
+                                "description": "Damage increased to distant enemies",
+                                "details": "* Damage increased by 50% to distant enemies\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Enhanced Turrets": {
+                                "description": "Turret damage increased",
+                                "details": "* Turret damage increased by 50%\n* Tag: Turret. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Red Fury": {
+                                "description": "Damage increased for a short time after eliminating an enemy",
+                                "details": "* Damage increased by 50% for 5 seconds after eliminating an enemy\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Danger Close": {
+                                "description": "Damage increased to nearby enemies",
+                                "details": "* Damage increased by 50% to nearby enemies\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Epic": [
+                        {
+                            "Assassin": {
+                                "description": "Damage increased after every 10 one shot eliminations",
+                                "details": "* Damage increased by 1% after every 10 one shot eliminations\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Explosive Armor": {
+                                "description": "Create large explosions when breaking enemy armor",
+                                "details": "* Armor explosions deal 500 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Checklist": {
+                                "description": "Damage increased after every 25 eliminations",
+                                "details": "* Damage increased by 1% after every 25 eliminations\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Sniper Turret": {
+                                "description": "Gain sniper turrets at the start of each island",
+                                "details": "* Gain 1 sniper turrets at the start of each island dealing (?) damage per second\n* Tag: Turret\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Gemstone": {
+                                "description": "Damage increased after clearing each island",
+                                "details": "* Damage increased by 5% after clearing each island\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Damage Aura": {
+                                "description": "Deal constant damage to nearby enemies",
+                                "details": "* Deal 15 damage per second to nearby enemies\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Tasty Orange": {
+                                "description": "Damage increased for each enemy eliminated on an island (resets after each island)",
+                                "details": "* Damage increased by 1% for each enemy eliminated on an island\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Shockwave": {
+                                "description": "Reloading damages all visible enemies",
+                                "details": "* Reloading deals 200 damage to all visible enemies\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 10 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Collector": {
+                                "description": "Damage increased for each perk level that you have",
+                                "details": "* Damage increased by 4% for each perk level that you have\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Sentry Turret": {
+                                "description": "Gain sentry turrets at the start of each island",
+                                "details": "* Gain 1 sentry turrets at the start of each island dealing (?) damage per second\n* Tag: Turret\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Legendary": [
+                        {
+                            "Mortar Turret": {
+                                "description": "Gain mortar turrets at the start of each island",
+                                "details": "* Gain 1 mortar turrets at the start of each island dealing (?) damage per second\n* Tag: Turret\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Exploding Enemies": {
+                                "description": "Enemies explode when eliminated",
+                                "details": "* Enemies explode when eliminated, dealing 1000 damage to nearby enemies\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 1 seconds"
+                            }
+                        }
+                    ],
+                    "Greed": []
+                },
+                "Economy": {
+                    "Rare": [
+                        {
+                            "Gold Coating": {
+                                "description": "Gain crystals when healing",
+                                "details": "* Gain 50% of healing as crystals\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Paycheck": {
+                                "description": "Gain crystals after clearing each island",
+                                "details": "* Gain 250 crystals after clearing each island\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Tony's Black Card": {
+                                "description": "Shop prices are discounted",
+                                "details": "* Shop prices are discounted by 15%\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Crystal Combo": {
+                                "description": "Enemies drop more crystals depending on your current combo",
+                                "details": "* Enemies drop 20% more crystals drop per combo level\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Finishing Move": {
+                                "description": "Enemies eliminated with critical hits drop more crystals",
+                                "details": "* Enemies eliminated with critical hits drop 100% more crystals\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Special Delivery": {
+                                "description": "Shops contain more goods for sale",
+                                "details": "* Shops contain 1 more goods for sale\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Snatcher": {
+                                "description": "Enemies eliminated at close range drop more crystals",
+                                "details": "* Enemies eliminated at close range drop 50% more crystals\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Epic": [
+                        {
+                            "Money Is Power": {
+                                "description": "Damage increased by 10% for every 1000 crystals you have",
+                                "details": "* Damage increased by 10% for every 1000 crystals you have (up to a cap of 100000 crystals)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Bonus Crystals": {
+                                "description": "More crystals drop when eliminating enemies",
+                                "details": "* 50% more crystals drop when eliminating enemies\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Legendary": [
+                        {
+                            "Clearance": {
+                                "description": "Chance for goods in shops to be heavily discounted (75% off)",
+                                "details": "* 8% chance for goods in shops to be heavily discounted\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        }
+                    ],
+                    "Greed": []
+                },
+                "Elemental": {
+                    "Rare": [
+                        {
+                            "Toxic": {
+                                "description": "Poison debuff stacks increased",
+                                "details": "* Poison debuff stacks increased by 25%\n* Tag: Poison. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "High Voltage": {
+                                "description": "Lightning debuff stacks increased",
+                                "details": "* Lightning debuff stacks increased by 25%\n* Tag: Lightning. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Ice Cube": {
+                                "description": "Damage increased to frozen enemies",
+                                "details": "* Damage increased by 50% to frozen enemies\n* Tag: Ice. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Firestarter": {
+                                "description": "Fire debuff stacks increased",
+                                "details": "* Fire debuff stacks increased by 25%\n* Tag: Fire. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Icebreaker": {
+                                "description": "Enemies take damage when thawing from ice",
+                                "details": "* Enemies take 500% weapon damage (+(?) damage) when thawing from ice\n* Tag: Ice. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Oil Can": {
+                                "description": "Damage increased to burning enemies",
+                                "details": "* Damage increased by 50% to burning enemies\n* Tag: Fire. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Poison Vial": {
+                                "description": "Damage increased to poisoned enemies",
+                                "details": "* Damage increased by 50% to poisoned enemies\n* Tag: Poison. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Ice Cold": {
+                                "description": "Ice debuff stacks increased",
+                                "details": "* Ice debuff stacks increased by 25%\n* Tag: Ice. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Metal Rod": {
+                                "description": "Damage increased to shocked enemies",
+                                "details": "* Damage increased by 50% to shocked enemies\n* Tag: Lightning. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Hot Steam": {
+                                "description": "Enemies take damage when extinguishing fire",
+                                "details": "* Enemies take 500 damage when extinguishing fire\n* Tag: Fire. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Epic": [
+                        {
+                            "Fire Aura": {
+                                "description": "Ignite and damage nearby enemies every few seconds",
+                                "details": "* Deal 250 damage and apply (?) fire stacks to nearby enemies\n* Tag: Fire\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 10 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Ice Claws": {
+                                "description": "Melee freezes enemies",
+                                "details": "* Melee freezes enemies with 50 ice stacks\n* Tag: Ice. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Fire Claws": {
+                                "description": "Melee ignites enemies",
+                                "details": "* Melee ignites enemies with 100 fire stacks\n* Tag: Fire\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Lightning Aura": {
+                                "description": "Shock and damage nearby enemies every few seconds",
+                                "details": "* Deal 250 damage and apply (?) lightning stacks to nearby enemies\n* Tag: Lightning\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 9 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Ice Aura": {
+                                "description": "Freeze and damage nearby enemies every few seconds",
+                                "details": "* Deal 250 damage and apply (?) ice stacks to nearby enemies\n* Tag: Ice\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 12 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Flammable Armor": {
+                                "description": "Ignite nearby enemies when breaking enemy armor",
+                                "details": "* Ignite nearby enemies with 250 fire stacks when breaking enemy armor\n* Tag: Fire\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Poison Aura": {
+                                "description": "Poison and damage nearby enemies every few seconds",
+                                "details": "* Deal 250 damage and apply (?) poison stacks to nearby enemies\n* Tag: Poison\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 6 seconds"
+                            }
+                        }
+                    ],
+                    "Legendary": [
+                        {
+                            "Flammable Enemies": {
+                                "description": "Enemies ignite all nearby enemies when eliminated",
+                                "details": "* Enemies ignite all nearby enemies with 250 fire stacks when eliminated\n* Tag: Fire\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 2 seconds"
+                            }
+                        },
+                        {
+                            "Poison Turret": {
+                                "description": "Gain poison turrets at the start of each island",
+                                "details": "* Gain 1 poison turrets at the start of each island dealing (?) damage per second\n* Tag: Turret\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Poisonous Enemies": {
+                                "description": "Enemies poison all nearby enemies when eliminated",
+                                "details": "* Enemies poison all nearby enemies with 250 poison stacks when eliminated\n* Tag: Poison\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 3 seconds"
+                            }
+                        },
+                        {
+                            "Ice Dash": {
+                                "description": "Dashing freezes and knocks back nearby enemies",
+                                "details": "* Deal 200 damage and apply (?) ice stacks to nearby enemies when dashing\n* Tag: Ice\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Electric Enemies": {
+                                "description": "Enemies shock all nearby enemies when eliminated",
+                                "details": "* Enemies shock all nearby enemies with 250 lightning stacks when eliminated\n* Tag: Lightning. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear\n* Cooldown: 3 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Fire Turret": {
+                                "description": "Gain fire turrets at the start of each island",
+                                "details": "* Gain 1 fire turrets at the start of each island dealing (?) damage per second\n* Tag: Turret\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Freezing Enemies": {
+                                "description": "Enemies freeze all nearby enemies when eliminated",
+                                "details": "* Enemies freeze all nearby enemies with 100 ice stacks when eliminated\n* Tag: Ice\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 4 seconds"
+                            }
+                        }
+                    ],
+                    "Greed": []
+                },
+                "Greed": {
+                    "Rare": [],
+                    "Epic": [],
+                    "Legendary": [],
+                    "Greed": [
+                        {
+                            "Double Edged Sword": {
+                                "description": "Gain crystals when dealing damage but lose crystals when taking damage",
+                                "details": "* Gain crystals worth 5% of damage dealt but lose 10% of your total crystals when taking damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Juggernaut": {
+                                "description": "Max health increased but more enemies spawn",
+                                "details": "* Max health increased by 50% but 15% more enemies spawn\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Up The Ante": {
+                                "description": "Damage increased but more enemies spawn",
+                                "details": "* Damage increased by 200% but 15% more enemies spawn\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Double Trouble": {
+                                "description": "Max health greatly increased but so is enemy health",
+                                "details": "* Max health increased by 250% but enemy health increased by 100%\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Brute Force": {
+                                "description": "Both outgoing and incoming damage heavily increased",
+                                "details": "* Damage increased by 250% but incoming damage increased by 50%\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Playing With Power": {
+                                "description": "Damage massively increased but you can hurt yourself",
+                                "details": "* Damage increased by 300% but you can hurt yourself\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Leap Of Faith": {
+                                "description": "Max health greatly increased but fall damage is enabled",
+                                "details": "* Max health increased by 300% but 10% max health is dealt as fall damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Workaholic": {
+                                "description": "More crystals drop when eliminating enemies but you lose some of your max health",
+                                "details": "* 100% more crystals drop when eliminating enemies but max health decreased by 20%\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Damage Seeker": {
+                                "description": "Damage greatly increased but lose max health when taking damage",
+                                "details": "* Damage increased by 250% but lose 1% max health when taking damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Slippery Slope": {
+                                "description": "Gain crystals but also lose health at the start of each island",
+                                "details": "* Gain 2500 crystals but lose 20% health at the start of each island\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Glass Cannon": {
+                                "description": "Damage massively increased but lose most of your max health",
+                                "details": "* Damage increased by 400% but max health decreased by 90%\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Limited Loot": {
+                                "description": "More crystals drop when eliminating enemies but the amount of loot choices in chests is reduced",
+                                "details": "* 100% more crystals drop when eliminating enemies but there are 1 less loot choices in chests\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Linear"
+                            }
+                        },
+                        {
+                            "High Roller": {
+                                "description": "Chance for extra chests to spawn but also a chance for no chests to spawn at all",
+                                "details": "* (?)% chance for 1 more reward chests to spawn but also a 33% chance for no chests to spawn at all\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Bribe": {
+                                "description": "Max health greatly increased but lose crystals when taking damage",
+                                "details": "* Max health increased by 500% but lose 5% crystals when taking damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Rising Star": {
+                                "description": "More crystals drop when eliminating enemies but more enemies spawn",
+                                "details": "* 100% more crystals drop when eliminating enemies but 20% more enemies spawn\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Cursed Lottery": {
+                                "description": "Gain a gigantic amount of crystals but lose most of your max health",
+                                "details": "* Gain 100000 crystals but lose 99.5% max health\n* Spawn weight: 0.15\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        }
+                    ]
+                },
+                "Health": {
+                    "Rare": [
+                        {
+                            "Vampire": {
+                                "description": "Heal after each melee elimination",
+                                "details": "* Heal 2 health after each melee elimination\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Scavenger": {
+                                "description": "Chance for enemies to drop health pickups when eliminated",
+                                "details": "* 5% chance for enemies to drop health pickups when eliminated\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Vitality": {
+                                "description": "Damage increased when at high (more than 85%) health",
+                                "details": "* Damage increased by 50% when at high health\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Fortitude": {
+                                "description": "Max health increased after clearing each island",
+                                "details": "* Max health increased by 20 after clearing each island\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Bullseye": {
+                                "description": "Max health increased after every 10 one shot eliminations",
+                                "details": "* Max health increased by 1 after every 10 one shot eliminations\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Healthy Combo": {
+                                "description": "Heal when increasing your combo",
+                                "details": "* Heal 50 health when increasing your combo\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Regenerator": {
+                                "description": "Health regenerates over time while on an active island (for up to 30 seconds)",
+                                "details": "* Health constantly regenerates by 1 while on an active island\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Endurance": {
+                                "description": "Heal after clearing each island",
+                                "details": "* Heal 50 health after clearing each island\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Personal Space": {
+                                "description": "Max health increased after every 10 close range eliminations",
+                                "details": "* Max health increased by 1 after every 10 close range eliminations\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Second Wind": {
+                                "description": "Damage increased when at low (less than 25%) health",
+                                "details": "* Damage increased by 50% when at low health\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Valued Customer": {
+                                "description": "Heal when making purchases at shops",
+                                "details": "* Heal 50 health when making purchases at shops\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Hard Target": {
+                                "description": "Incoming damage reduced (up to a cap of 75% reduction)",
+                                "details": "* Incoming damage reduced by 10%\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        }
+                    ],
+                    "Epic": [
+                        {
+                            "Reinforced": {
+                                "description": "Gain additional armor plates each time you pick up armor",
+                                "details": "* Gain 1 additional armor plates each time you pick up armor\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Big Hearts": {
+                                "description": "Gain more max health from hearts",
+                                "details": "* Gain 100% more max health from hearts\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Grim Reaper": {
+                                "description": "Heal after eliminating enemies",
+                                "details": "* Heal 5 health after eliminating enemies\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 1 seconds"
+                            }
+                        },
+                        {
+                            "Grave Dodger": {
+                                "description": "Invulnerable for a short time when at 1 health",
+                                "details": "* Invulnerable for 4 seconds when at 1 health\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        }
+                    ],
+                    "Legendary": [
+                        {
+                            "Regenerating Armor": {
+                                "description": "Gain armor plates at the start of each island",
+                                "details": "* Gain 1 armor plates at the start of each island\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Greed": []
+                },
+                "Luck": {
+                    "Rare": [
+                        {
+                            "Rigged Totems": {
+                                "description": "Chance based totems are more likely to roll in your favor",
+                                "details": "* Chance based totems are 25% more likely to roll in your favor\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Efficiency": {
+                                "description": "Chance to gain ammo when dealing damage",
+                                "details": "* 20% chance to gain ammo when dealing damage\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Autoloader": {
+                                "description": "Chance to instantly reload after each elimination",
+                                "details": "* 10% chance to instantly reload after each elimination\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Ghost Ammo": {
+                                "description": "Chance to not use ammo when firing",
+                                "details": "* 20% chance to not use ammo when firing\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Driller": {
+                                "description": "Destroying destructible rocks has a greater chance to spawn loot",
+                                "details": "* Destroying destructible rocks has a 5% greater chance to spawn loot\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        }
+                    ],
+                    "Epic": [
+                        {
+                            "Streamer Loot": {
+                                "description": "Higher rarity loot has a greater chance to spawn from chests",
+                                "details": "* Higher rarity loot has a 150% greater chance to spawn from chests\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Bulletproof": {
+                                "description": "Chance to block incoming damage (up to a cap of 75% chance)",
+                                "details": "* 8% chance to block incoming damage\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Performance Bonus": {
+                                "description": "Chance to get an additional reward chest when flawlessly clearing an island",
+                                "details": "* 25% chance to get an additional reward chest when flawlessly clearing an island\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        }
+                    ],
+                    "Legendary": [
+                        {
+                            "Crystal Asteroids": {
+                                "description": "Chance for asteroids containing bonus loot to spawn on each island",
+                                "details": "* 5% chance for asteroids containing bonus loot to spawn on each island\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Gold Dice": {
+                                "description": "All chance based mods and perks are more likely to trigger",
+                                "details": "* All chance based mods and perks are 50% more likely to trigger\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Faulty Chests": {
+                                "description": "Chance for unchosen chest loot to not disappear",
+                                "details": "* 10% chance for unchosen chest loot to not disappear\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Double Vision": {
+                                "description": "Chance to get an additional reward chest after clearing each island",
+                                "details": "* 20% chance to get an additional reward chest after clearing each island\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Rare Treasure": {
+                                "description": "Enemies have a small chance to drop loot when eliminated",
+                                "details": "* Enemies have a 1% chance to drop loot when eliminated\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        }
+                    ],
+                    "Greed": []
+                },
+                "Skill": {
+                    "Rare": [
+                        {
+                            "Big Claws": {
+                                "description": "Melee range increased",
+                                "details": "* Melee range increased by 20%\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Epic": [
+                        {
+                            "All You Can Eat": {
+                                "description": "No ammo is used for a short time after eliminating an enemy",
+                                "details": "* No ammo is used for 2 seconds after eliminating an enemy\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Big Chests": {
+                                "description": "Chests contain more loot choices to choose from",
+                                "details": "* Chests contain 1 more loot choices to choose from\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Legendary": [
+                        {
+                            "Care Package": {
+                                "description": "Get additional reward chests after clearing every 4th island",
+                                "details": "* Get 1 additional reward chests after clearing every 4th island\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Level Up": {
+                                "description": "Random mods and perks are upgraded to the next level after clearing every 3rd island",
+                                "details": "* 1 random mods and perks are upgraded to the next level after clearing every 3rd island\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Greed": []
+                },
+                "Speed": {
+                    "Rare": [
+                        {
+                            "Speed Demon": {
+                                "description": "Movement speed increased",
+                                "details": "* Movement speed increased by 20%\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Fast Claws": {
+                                "description": "Reload speed increased",
+                                "details": "* Reload speed increased by 33%\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Adrenaline": {
+                                "description": "Fire rate increased for a short time after eliminating an enemy",
+                                "details": "* Fire rate increased for 5 seconds after eliminating an enemy\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Stamina": {
+                                "description": "Gain more dashes",
+                                "details": "* Gain 1 more dashes\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Epic": [
+                        {
+                            "Repelling Dash": {
+                                "description": "Dashing repels nearby enemy projectiles",
+                                "details": "* +33% repel radius\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Legendary": [
+                        {
+                            "Powerslide": {
+                                "description": "Sliding shoots out fiery sparks that damage and ignite nearby enemies",
+                                "details": "* Sliding constantly deals 30 damage and applies (?) fire stacks to nearby enemies\n* Tag: Fire\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Dagger Dash": {
+                                "description": "Dashing sends an arc of daggers in the direction that you are looking",
+                                "details": "* Each dagger deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 2 seconds"
+                            }
+                        }
+                    ],
+                    "Greed": []
+                }
+            }
+        },
+        "wmods": {
+            "pools": {
+                "Critical": {
+                    "Rare": [
+                        {
+                            "Streak Shot": {
+                                "description": "Critical hit chance increased for each shot you hit in a row without missing",
+                                "details": "* Critical hit chance increased by 1% for each shot you hit in a row without missing\n* Tag: Critical\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Hot Shot": {
+                                "description": "Increased critical hit chance but incoming damage is also increased",
+                                "details": "* Critical hit chance increased by 20% but incoming damage increased by 25%\n* Tag: Critical\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Debuff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Power Punch": {
+                                "description": "Increased critical hit damage",
+                                "details": "* Critical hit damage increased by 25%\n* Tag: Critical. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Critical Chain": {
+                                "description": "Greatly increased critical hit chance for 5 seconds after landing a critical hit",
+                                "details": "* Critical hit chance increased by 33% for 5 seconds after landing a critical hit\n* Tag: Critical. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Hyperbolic\n* Cooldown: 12 seconds"
+                            }
+                        },
+                        {
+                            "Sharpshooter": {
+                                "description": "Increased critical hit chance",
+                                "details": "* Critical hit chance increased by 10%\n* Tag: Critical\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        }
+                    ],
+                    "Epic": [
+                        {
+                            "Mega Crit": {
+                                "description": "Chance for shots to Mega Crit (deal 3x critical hit damage) when landing critical hits",
+                                "details": "\n* Tag: Critical. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Hyperbolic",
+                                "dmgMod": {
+                                    "Minigun": 5.0,
+                                    "Blade Launcher": 15.0,
+                                    "Cluster Launcher": 25.0,
+                                    "Dual Shotguns": 25.0,
+                                    "Burst Pistol": 12.5,
+                                    "Sniper": 50.0,
+                                    "Crossbow": 30.0,
+                                    "Rocket Launcher": 50.0,
+                                    "Dual Pistols": 15.0,
+                                    "Orb Launcher": 10.0,
+                                    "Auto Shotgun": 12.5,
+                                    "Auto Rifle": 12.5
+                                }
+                            }
+                        },
+                        {
+                            "Critical Blast": {
+                                "description": "Critical hits create powerful explosions",
+                                "details": "* Critical blasts deal 400 damage\n* Tag: Critical. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear\n* Cooldown: 2 seconds"
+                            }
+                        },
+                        {
+                            "Critical Link": {
+                                "description": "Critical hits spawn 5 new shots that target nearby enemies",
+                                "details": "* Each critical link shot deals 250% weapon damage ((?) damage)\n* Tag: Critical. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear\n* Cooldown: 1 seconds"
+                            }
+                        }
+                    ],
+                    "Legendary": [
+                        {
+                            "Critical Blades": {
+                                "description": "Critical hits spawn deadly blades that seek out nearby enemies",
+                                "details": "* Each blade deals 100 damage per second\n* Tag: Critical. Requires item with the same tag to spawn\n* Spawn weight: 2.0\n* Buff scaling: Linear\n* Cooldown: 5 seconds"
+                            }
+                        }
+                    ],
+                    "Greed": []
+                },
+                "Damage": {
+                    "Rare": [
+                        {
+                            "High Caliber": {
+                                "description": "Shots deal more damage but clip size is reduced",
+                                "details": "* Damage increased by 75% (+(?) damage) but clip size reduced by 25%\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Chaotic Shot": {
+                                "description": "Shots deal more damage but move in random patterns",
+                                "details": "* Damage increased by 50% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Blind Fire": {
+                                "description": "Shots deal more damage but spread is heavily increased",
+                                "details": "* Damage increased by 50% (+(?) damage) but spread increased by 50%\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Wind Up": {
+                                "description": "Shots deal more damage for each shot fired until reloading",
+                                "details": "* Damage increased by 1 for each shot fired until reloading (up to a max of 25 shots)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Sharp Shot": {
+                                "description": "Shots deal additional flat damage",
+                                "details": "* Shots deal 45 additional flat damage\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Uppercut": {
+                                "description": "Every fifth shot deals more damage",
+                                "details": "* Damage increased by 300% (+(?) damage) on every fifth shot\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Time Shot": {
+                                "description": "Shots deal more damage but damage is dealt over time",
+                                "details": "* Damage increased by 50% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Heavy Hitter": {
+                                "description": "Shots deal more damage but fire rate is reduced",
+                                "details": "* Damage increased by 100% (+(?) damage) but fire rate reduced by 20%\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Trick Shot": {
+                                "description": "Shots deal more damage when hipfiring but less damage when aiming",
+                                "details": "* Damage increased by 33% (+(?) damage) when hipfiring but reduced by 33% when aiming\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Heavy Shot": {
+                                "description": "Shots deal more damage but are heavier",
+                                "details": "* Shots deal 50% more damage (+(?) damage) but are 15% heavier\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Ultra Shot": {
+                                "description": "Chance to fire high damage bullets along with your shots",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic",
+                                "dmgMod": {
+                                    "Minigun": 2.0,
+                                    "Blade Launcher": 6.0,
+                                    "Cluster Launcher": 10.0,
+                                    "Dual Shotguns": 10.0,
+                                    "Burst Pistol": 5.0,
+                                    "Sniper": 20.0,
+                                    "Crossbow": 12.0,
+                                    "Rocket Launcher": 20.0,
+                                    "Dual Pistols": 6.0,
+                                    "Orb Launcher": 4.0,
+                                    "Auto Shotgun": 5.0,
+                                    "Auto Rifle": 5.0
+                                }
+                            }
+                        },
+                        {
+                            "Time Bolt": {
+                                "description": "Chance to fire bolts that deal damage over time",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic",
+                                "dmgMod": {
+                                    "Minigun": 2.0,
+                                    "Blade Launcher": 6.0,
+                                    "Cluster Launcher": 10.0,
+                                    "Dual Shotguns": 10.0,
+                                    "Burst Pistol": 5.0,
+                                    "Sniper": 20.0,
+                                    "Crossbow": 12.0,
+                                    "Rocket Launcher": 20.0,
+                                    "Dual Pistols": 6.0,
+                                    "Orb Launcher": 4.0,
+                                    "Auto Shotgun": 5.0,
+                                    "Auto Rifle": 5.0
+                                }
+                            }
+                        },
+                        {
+                            "Steady Shot": {
+                                "description": "Shots deal more damage when aiming but less damage when hipfiring",
+                                "details": "* Damage increased by 33% (+(?) damage) when aiming but reduced by 33% when hipfiring\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Snake Shot": {
+                                "description": "Shots deal more damage but move in snakelike patterns",
+                                "details": "* Damage increased by 25% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Precision": {
+                                "description": "Shots deal more damage for each shot you hit in a row without missing (up to a max of 50 shots in a row)",
+                                "details": "* Damage increased by 1 for each shot you hit in a row without missing\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Spiral Shot": {
+                                "description": "Shots deal more damage but move in spiral patterns",
+                                "details": "* Damage increased by 50% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Glue Shot": {
+                                "description": "Shots stick to enemies and deal more damage but there is a short delay before damage is dealt",
+                                "details": "* Damage increased by 75% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Reload Arc": {
+                                "description": "Reloading fires an arc of powerful projectiles",
+                                "details": "* Each projectile deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 5 seconds"
+                            }
+                        },
+                        {
+                            "Big Shot": {
+                                "description": "Shots are larger and deal more damage but move more slowly",
+                                "details": "* Shots are 50% larger and deal 50% more damage (+(?) damage) but move 15% more slowly\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Recoil Shot": {
+                                "description": "Shots deal more damage but recoil is heavily increased",
+                                "details": "* Damage increased by 33% (+(?) damage) but recoil is increased by 200%\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Bouncing Shot": {
+                                "description": "Shots bounce around and deal more damage after each bounce",
+                                "details": "* Damage increased by 50% (+(?) damage) after each bounce\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Zig Zag Shot": {
+                                "description": "Shots deal more damage but move in zig zag patterns",
+                                "details": "* Damage increased by 50% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Clip Shot": {
+                                "description": "Shots deal more damage for each bullet remaining in the clip",
+                                "details": "* Damage increased by 1 for each bullet remaining in the clip (up to a max of 25 bullets)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Epic": [
+                        {
+                            "Shotgun Blast": {
+                                "description": "Fire deadly shotgun blasts along with your shots",
+                                "details": "* Each shotgun pellet deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 1 seconds"
+                            }
+                        },
+                        {
+                            "Piercing Wave": {
+                                "description": "Fire slow damaging waves along with your shots",
+                                "details": "* Each wave deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 8 seconds"
+                            }
+                        },
+                        {
+                            "Aura Shot": {
+                                "description": "Shots are surrounded by auras that deal constant damage",
+                                "details": "* Each aura deals 25 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Damage Shot": {
+                                "description": "Shots deal more damage",
+                                "details": "* Damage increased by 200% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Dagger Arc": {
+                                "description": "Fire arcs of daggers along with your shots",
+                                "details": "* Each dagger deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 5 seconds"
+                            }
+                        },
+                        {
+                            "Firework Shot": {
+                                "description": "Fire fireworks along with your shots",
+                                "details": "* Each firework deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 8 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Bubble Shot": {
+                                "description": "Shots that hit enemies spawn damaging bubbles nearby",
+                                "details": "* Each bubble deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 3 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Arcane Blast": {
+                                "description": "Fire close range AOE blasts along with your shots",
+                                "details": "* Each arcane blast deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 6 seconds"
+                            }
+                        },
+                        {
+                            "Spark Shot": {
+                                "description": "Shots create bursts of damaging sparks on impact",
+                                "details": "* Each spark deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 4 seconds"
+                            }
+                        },
+                        {
+                            "Mace Shot": {
+                                "description": "Fire mace balls along with your shots",
+                                "details": "* Each mace ball deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 6 seconds"
+                            }
+                        },
+                        {
+                            "Thorn Shot": {
+                                "description": "Fire homing thorns along with your shots that stick to enemies and deal damage over time",
+                                "details": "* Each thorn deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 4 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        }
+                    ],
+                    "Legendary": [
+                        {
+                            "Sharpened Axe": {
+                                "description": "Fire spinning axes along with your shots",
+                                "details": "* Each axe deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 10 seconds"
+                            }
+                        },
+                        {
+                            "Triangle Shot": {
+                                "description": "Fire powerful triangle projectiles along with your shots",
+                                "details": "* Each triangle deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 8 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Spore Shot": {
+                                "description": "Shots grow explosive mushrooms from enemies",
+                                "details": "* Each mushroom deals 100 damage and applies (?) poison stacks\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 6 seconds"
+                            }
+                        },
+                        {
+                            "Spike Strike": {
+                                "description": "Shots cause spikes to erupt from the ground, damaging nearby enemies",
+                                "details": "* Spike strikes deal 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 4 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Torpedo Shot": {
+                                "description": "Fire homing torpedos along with your shots",
+                                "details": "* Each torpedo deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 3 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Bomb Shot": {
+                                "description": "Shots that hit enemies spawn clusters of bombs nearby",
+                                "details": "* Each bomb deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 4 seconds"
+                            }
+                        },
+                        {
+                            "Splash Damage": {
+                                "description": "Shots deal splash damage to nearby enemies",
+                                "details": "* Shots deal 250 splash damage to nearby enemies\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Proximity Barrage": {
+                                "description": "Shots that hit enemies spawn powerful missiles that seek out nearby enemies",
+                                "details": "* Each missile deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 5 seconds"
+                            }
+                        }
+                    ],
+                    "Greed": []
+                },
+                "Economy": {
+                    "Rare": [
+                        {
+                            "Money Shot": {
+                                "description": "Gain crystals when damaging enemies",
+                                "details": "* Gain 1 crystals when damaging enemies\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Epic": [],
+                    "Legendary": [],
+                    "Greed": []
+                },
+                "Elemental": {
+                    "Rare": [
+                        {
+                            "Random Shot": {
+                                "description": "Shots apply random debuffs to enemies",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic",
+                                "dmgMod": {
+                                    "Minigun": 2.0,
+                                    "Blade Launcher": 6.0,
+                                    "Cluster Launcher": 10.0,
+                                    "Dual Shotguns": 10.0,
+                                    "Burst Pistol": 5.0,
+                                    "Sniper": 20.0,
+                                    "Crossbow": 12.0,
+                                    "Rocket Launcher": 20.0,
+                                    "Dual Pistols": 6.0,
+                                    "Orb Launcher": 4.0,
+                                    "Auto Shotgun": 5.0,
+                                    "Auto Rifle": 5.0
+                                }
+                            }
+                        },
+                        {
+                            "Fire Shot": {
+                                "description": "Shots burn enemies",
+                                "details": "\n* Tag: Fire\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic",
+                                "dmgMod": {
+                                    "Minigun": 2.0,
+                                    "Blade Launcher": 6.0,
+                                    "Cluster Launcher": 10.0,
+                                    "Dual Shotguns": 10.0,
+                                    "Burst Pistol": 5.0,
+                                    "Sniper": 20.0,
+                                    "Crossbow": 12.0,
+                                    "Rocket Launcher": 20.0,
+                                    "Dual Pistols": 6.0,
+                                    "Orb Launcher": 4.0,
+                                    "Auto Shotgun": 5.0,
+                                    "Auto Rifle": 5.0
+                                }
+                            }
+                        },
+                        {
+                            "Ice Shot": {
+                                "description": "Shots freeze enemies",
+                                "details": "\n* Tag: Ice\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic",
+                                "dmgMod": {
+                                    "Minigun": 1.0,
+                                    "Blade Launcher": 3.0,
+                                    "Cluster Launcher": 5.0,
+                                    "Dual Shotguns": 5.0,
+                                    "Burst Pistol": 2.5,
+                                    "Sniper": 10.0,
+                                    "Crossbow": 6.0,
+                                    "Rocket Launcher": 10.0,
+                                    "Dual Pistols": 3.0,
+                                    "Orb Launcher": 2.0,
+                                    "Auto Shotgun": 2.5,
+                                    "Auto Rifle": 2.5
+                                }
+                            }
+                        },
+                        {
+                            "Lightning Shot": {
+                                "description": "Shots shock enemies",
+                                "details": "\n* Tag: Lightning\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic",
+                                "dmgMod": {
+                                    "Minigun": 2.0,
+                                    "Blade Launcher": 6.0,
+                                    "Cluster Launcher": 10.0,
+                                    "Dual Shotguns": 10.0,
+                                    "Burst Pistol": 5.0,
+                                    "Sniper": 20.0,
+                                    "Crossbow": 12.0,
+                                    "Rocket Launcher": 20.0,
+                                    "Dual Pistols": 6.0,
+                                    "Orb Launcher": 4.0,
+                                    "Auto Shotgun": 5.0,
+                                    "Auto Rifle": 5.0
+                                }
+                            }
+                        },
+                        {
+                            "Poison Shot": {
+                                "description": "Shots poison enemies",
+                                "details": "\n* Tag: Poison\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic",
+                                "dmgMod": {
+                                    "Minigun": 4.0,
+                                    "Blade Launcher": 12.0,
+                                    "Cluster Launcher": 20.0,
+                                    "Dual Shotguns": 20.0,
+                                    "Burst Pistol": 10.0,
+                                    "Sniper": 40.0,
+                                    "Crossbow": 24.0,
+                                    "Rocket Launcher": 40.0,
+                                    "Dual Pistols": 12.0,
+                                    "Orb Launcher": 8.0,
+                                    "Auto Shotgun": 10.0,
+                                    "Auto Rifle": 10.0
+                                }
+                            }
+                        }
+                    ],
+                    "Epic": [],
+                    "Legendary": [
+                        {
+                            "Poison Storm": {
+                                "description": "Shots create poisonous storms that deal damage over time",
+                                "details": "* Poison storms deal 100 damage and apply (?) poison stacks over a Duration second period\n* Tag: Poison\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 15 seconds"
+                            }
+                        },
+                        {
+                            "Fire Strike": {
+                                "description": "Shots bring down powerful fire strikes that damage and burn nearby enemies",
+                                "details": "* Fire strikes deal 100 damage and apply (?) fire stacks\n* Tag: Fire\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 12 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Fireball Shot": {
+                                "description": "Fire fireballs along with your shots",
+                                "details": "* Each fireball deals 100 damage and applies (?) fire stacks\n* Tag: Fire\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 6 seconds"
+                            }
+                        },
+                        {
+                            "Poison Strike": {
+                                "description": "Shots bring down poison strikes that damage and poison nearby enemies",
+                                "details": "* Poison strikes deal 100 damage and apply (?) poison stacks\n* Tag: Poison\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 10 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Ice Storm": {
+                                "description": "Shots create icy storms that deal damage over time",
+                                "details": "* Ice storms deal 100 damage and apply (?) ice stacks over a Duration second period\n* Tag: Ice\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 20 seconds"
+                            }
+                        },
+                        {
+                            "Lightning Strike": {
+                                "description": "Shots bring down lightning strikes that damage and shock nearby enemies",
+                                "details": "* Lightning strikes deal 100 damage and apply (?) lightning stacks\n* Tag: Lightning\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 10 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        },
+                        {
+                            "Ice Strike": {
+                                "description": "Shots bring down ice strikes that damage and freeze nearby enemies",
+                                "details": "* Ice strikes deal 100 damage and apply (?) ice stacks\n* Tag: Ice\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 20 seconds"
+                            }
+                        },
+                        {
+                            "Fire Storm": {
+                                "description": "Shots create fiery storms that deal damage over time",
+                                "details": "* Fire storms deal 100 damage and apply (?) fire stacks over a Duration second period\n* Tag: Fire\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 16 seconds"
+                            }
+                        },
+                        {
+                            "Lightning Storm": {
+                                "description": "Shots create electric storms that deal damage over time",
+                                "details": "* Lightning storms deal 100 damage and apply (?) lightning stacks over a Duration second period\n* Tag: Lightning\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 12 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                            }
+                        }
+                    ],
+                    "Greed": []
+                },
+                "Health": {
+                    "Rare": [
+                        {
+                            "Health Shot": {
+                                "description": "Heal when dealing damage",
+                                "details": "* Heal 1 health when dealing damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 1 seconds"
+                            }
+                        }
+                    ],
+                    "Epic": [],
+                    "Legendary": [],
+                    "Greed": []
+                },
+                "Luck": {
+                    "Rare": [],
+                    "Epic": [
+                        {
+                            "Scatter Shot": {
+                                "description": "Chance for shots to scatter into smaller shots on impact",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic",
+                                "dmgMod": {
+                                    "Minigun": 6.0,
+                                    "Blade Launcher": 18.0,
+                                    "Cluster Launcher": 30.0,
+                                    "Dual Shotguns": 30.0,
+                                    "Burst Pistol": 15.0,
+                                    "Sniper": 60.0,
+                                    "Crossbow": 36.0,
+                                    "Rocket Launcher": 60.0,
+                                    "Dual Pistols": 18.0,
+                                    "Orb Launcher": 12.0,
+                                    "Auto Shotgun": 15.0,
+                                    "Auto Rifle": 15.0
+                                }
+                            }
+                        },
+                        {
+                            "Split Shot": {
+                                "description": "Chance for shots to split into smaller shots while in the air",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic",
+                                "dmgMod": {
+                                    "Minigun": 5.0,
+                                    "Blade Launcher": 15.0,
+                                    "Cluster Launcher": 25.0,
+                                    "Dual Shotguns": 25.0,
+                                    "Burst Pistol": 12.5,
+                                    "Sniper": 50.0,
+                                    "Crossbow": 30.0,
+                                    "Rocket Launcher": 50.0,
+                                    "Dual Pistols": 15.0,
+                                    "Orb Launcher": 10.0,
+                                    "Auto Shotgun": 12.5,
+                                    "Auto Rifle": 12.5
+                                }
+                            }
+                        },
+                        {
+                            "Arc Shot": {
+                                "description": "Chance to fire in an arc shot formation",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic",
+                                "dmgMod": {
+                                    "Minigun": 5.0,
+                                    "Blade Launcher": 15.0,
+                                    "Cluster Launcher": 25.0,
+                                    "Dual Shotguns": 25.0,
+                                    "Burst Pistol": 12.5,
+                                    "Sniper": 50.0,
+                                    "Crossbow": 30.0,
+                                    "Rocket Launcher": 50.0,
+                                    "Dual Pistols": 15.0,
+                                    "Orb Launcher": 10.0,
+                                    "Auto Shotgun": 12.5,
+                                    "Auto Rifle": 12.5
+                                }
+                            }
+                        },
+                        {
+                            "Triple Shot": {
+                                "description": "Chance to fire in a triple shot formation",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn",
+                                "dmgMod": {
+                                    "Minigun": 7.0,
+                                    "Blade Launcher": 21.0,
+                                    "Cluster Launcher": 35.0,
+                                    "Dual Shotguns": 35.0,
+                                    "Burst Pistol": 17.5,
+                                    "Sniper": 70.0,
+                                    "Crossbow": 42.0,
+                                    "Rocket Launcher": 70.0,
+                                    "Dual Pistols": 21.0,
+                                    "Orb Launcher": 14.0,
+                                    "Auto Shotgun": 17.5,
+                                    "Auto Rifle": 17.5
+                                }
+                            }
+                        }
+                    ],
+                    "Legendary": [
+                        {
+                            "X Shot": {
+                                "description": "Chance to fire in an X shot formation",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn",
+                                "dmgMod": {
+                                    "Minigun": 3.0,
+                                    "Blade Launcher": 9.0,
+                                    "Cluster Launcher": 15.0,
+                                    "Dual Shotguns": 15.0,
+                                    "Burst Pistol": 7.5,
+                                    "Sniper": 30.0,
+                                    "Crossbow": 18.0,
+                                    "Rocket Launcher": 30.0,
+                                    "Dual Pistols": 9.0,
+                                    "Orb Launcher": 6.0,
+                                    "Auto Shotgun": 7.5,
+                                    "Auto Rifle": 7.5
+                                }
+                            }
+                        },
+                        {
+                            "Double Tap": {
+                                "description": "Chance for shots to deal damage twice",
+                                "details": "* 33% chance for shots to deal damage twice\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Square Shot": {
+                                "description": "Chance to fire in a square shot formation",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn",
+                                "dmgMod": {
+                                    "Minigun": 3.0,
+                                    "Blade Launcher": 9.0,
+                                    "Cluster Launcher": 15.0,
+                                    "Dual Shotguns": 15.0,
+                                    "Burst Pistol": 7.5,
+                                    "Sniper": 30.0,
+                                    "Crossbow": 18.0,
+                                    "Rocket Launcher": 30.0,
+                                    "Dual Pistols": 9.0,
+                                    "Orb Launcher": 6.0,
+                                    "Auto Shotgun": 7.5,
+                                    "Auto Rifle": 7.5
+                                }
+                            }
+                        }
+                    ],
+                    "Greed": []
+                },
+                "Skill": {
+                    "Rare": [
+                        {
+                            "Grip Tape": {
+                                "description": "Spread and recoil heavily reduced",
+                                "details": "* Spread and recoil reduced by 25%\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Big Mag": {
+                                "description": "Clip size increased",
+                                "details": "* Clip size increased by 75%\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Epic": [
+                        {
+                            "Targeting Shot": {
+                                "description": "Chance for shots to target nearby enemies on impact",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic",
+                                "dmgMod": {
+                                    "Minigun": 8.0,
+                                    "Blade Launcher": 24.0,
+                                    "Cluster Launcher": 40.0,
+                                    "Dual Shotguns": 40.0,
+                                    "Burst Pistol": 20.0,
+                                    "Sniper": 80.0,
+                                    "Crossbow": 48.0,
+                                    "Rocket Launcher": 80.0,
+                                    "Dual Pistols": 24.0,
+                                    "Orb Launcher": 16.0,
+                                    "Auto Shotgun": 20.0,
+                                    "Auto Rifle": 20.0
+                                }
+                            }
+                        }
+                    ],
+                    "Legendary": [
+                        {
+                            "Firepower": {
+                                "description": "Fire extra shots with increased spread",
+                                "details": "* Fire 1 extra shots with increased spread\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Homing Shot": {
+                                "description": "Chance for shots to home towards enemies",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn",
+                                "dmgMod": {
+                                    "Minigun": 10.0,
+                                    "Blade Launcher": 30.0,
+                                    "Cluster Launcher": 50.0,
+                                    "Dual Shotguns": 50.0,
+                                    "Burst Pistol": 25.0,
+                                    "Sniper": 100.0,
+                                    "Crossbow": 60.0,
+                                    "Rocket Launcher": 100.0,
+                                    "Dual Pistols": 30.0,
+                                    "Orb Launcher": 20.0,
+                                    "Auto Shotgun": 25.0,
+                                    "Auto Rifle": 25.0
+                                }
+                            }
+                        }
+                    ],
+                    "Greed": []
+                },
+                "Speed": {
+                    "Rare": [
+                        {
+                            "Rapid Fire": {
+                                "description": "Fire rate increased",
+                                "details": "* Fire rate increased by 10%\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Accelerating Shot": {
+                                "description": "Shots deal more damage but start slow and accelerate over time",
+                                "details": "* Damage increased by 100% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Aerial Shot": {
+                                "description": "Shots deal more damage when airborne",
+                                "details": "* Damage increased by 50% (+(?) damage) when airborne\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Light Shot": {
+                                "description": "Fire rate increased but shots deal less damage",
+                                "details": "* Fire rate increased by 20% but shots deal 15% less damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Fast Shot": {
+                                "description": "Shots are faster and are less affected by gravity",
+                                "details": "* Shots are 25% faster and lighter\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Knockback Shot": {
+                                "description": "Shots knock back enemies",
+                                "details": "* Knockback strength increased by 100%\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Epic": [
+                        {
+                            "Juiced": {
+                                "description": "Increased damage, fire rate and reload speed",
+                                "details": "* Damage, fire rate and reload speed increased by 20%\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Piercing Shot": {
+                                "description": "Shots pierce through enemies",
+                                "details": "* Shots pierce through 1 enemies\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Supercharged": {
+                                "description": "Fire rate increased",
+                                "details": "* Fire rate increased by 25%\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Legendary": [],
+                    "Greed": []
+                }
+            }
+        }
+    }
+}
