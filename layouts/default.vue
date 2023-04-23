@@ -23,7 +23,7 @@
     </v-app-bar>
     <v-main>
       <div class="wave-container">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 500" preserveAspectRatio="none" class="wave">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 300" preserveAspectRatio="none" class="wave">
         <path id="wavePath">
           <animate attributeName="d" dur="15s" repeatCount="indefinite"
             values="M0,200 C200,50 200,350 400,200 C600,50 600,350 800,200 C1000,50 1000,350 1200,200 C1400,50 1400,350 1600,200 V500 H0 Z;
@@ -130,7 +130,8 @@ export default {
   width: 200%;
   height: 50%; /* Adjust the height of the wave container */
   overflow: hidden;
-  z-index: -0.5;
+  z-index: 0;
+  /* Place wave behind perks */
 }
 
 .wave {
@@ -138,6 +139,7 @@ export default {
   /* Wave color */
   animation: waveAnimation 15s linear infinite;
   /* Wave animation */
+
 }
 </style>
 
