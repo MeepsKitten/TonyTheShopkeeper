@@ -44,7 +44,7 @@
 
 <script>
 import { computed } from 'vue'
-import data from '~/assets/data/data.json';
+import data from '~/assets/data/crab-data.json';
 export default {
   name: 'DefaultLayout',
   data() {
@@ -54,14 +54,19 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
+          icon: 'mdi-waves',
           title: 'Welcome',
           to: '/',
         },
         {
-          icon: 'mdi-chart-bubble',
+          icon: 'mdi-star',
           title: 'Perks',
           to: '/perks',
+        },
+        {
+          icon: 'mdi-pistol',
+          title: 'Weapon Mods',
+          to: '/wmods',
         },
       ],
       miniVariant: false,
