@@ -43,7 +43,7 @@
   
   
 <script>
-import data from '~/assets/data/data.json';
+import data from '~/assets/data/crab-data.json';
 export default {
 
     inject: ['selectedVersion'],
@@ -199,73 +199,38 @@ export default {
 }
 
 .number-highlight {
-    width: 200px;
-    height: 200px;
-
-    /* Set border radius to 50% to create an ellipse */
-    border-radius: 100%;
-
-    /* Set the background color of the ellipse */
-    background-color: #60b3e363;
-
-    /* Add a blur effect to the ellipse */
-    box-shadow: 0 0 20px 0px #60b3e3;
+    text-shadow: 
+        0 0 5px #777777,
+        0 0 15px #777777,
+        0 0 25px #777777;
 }
 
 .number-highlight-greed {
-    width: 200px;
-    height: 200px;
-
-    /* Set border radius to 50% to create an ellipse */
-    border-radius: 100%;
-
-    /* Set the background color of the ellipse */
-    background-color: #ff00002d;
-
-    /* Add a blur effect to the ellipse */
-    box-shadow: 0 0 20px 0px #ff0000;
+    text-shadow: 
+        0 0 5px #ff0000,
+        0 0 15px #ff0000,
+        0 0 25px #ff0000;
 }
 
 .number-highlight-epic {
-    width: 200px;
-    height: 200px;
-
-    /* Set border radius to 50% to create an ellipse */
-    border-radius: 100%;
-
-    /* Set the background color of the ellipse */
-    background-color: #b300b338;
-
-    /* Add a blur effect to the ellipse */
-    box-shadow: 0 0 20px 0px #b300b3;
+    text-shadow: 
+        0 0 5px purple,
+        0 0 15px purple,
+        0 0 25px purple;
 }
 
 .number-highlight-legendary {
-    width: 200px;
-    height: 200px;
-
-    /* Set border radius to 50% to create an ellipse */
-    border-radius: 100%;
-
-    /* Set the background color of the ellipse */
-    background-color: #ffff003f;
-
-    /* Add a blur effect to the ellipse */
-    box-shadow: 0 0 20px 0px #ffff00;
+    text-shadow: 
+        0 0 5px #ffff00,
+        0 0 15px #ffff00,
+        0 0 25px #ffff00;
 }
 
 .number-highlight-rare {
-    width: 200px;
-    height: 200px;
-
-    /* Set border radius to 50% to create an ellipse */
-    border-radius: 100%;
-
-    /* Set the background color of the ellipse */
-    background-color: #0000ff5b;
-
-    /* Add a blur effect to the ellipse */
-    box-shadow: 0 0 20px 0px #0000ff;
+    text-shadow: 
+        0 0 5px #0000ff,
+        0 0 15px #0000ff,
+        0 0 25px #0000ff;
 }
 
 .perk-card {
