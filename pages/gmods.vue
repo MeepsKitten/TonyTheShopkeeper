@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="header-container">
-            <h1>Perks</h1>
+            <h1>Grenade Mods</h1>
         </div>
         <v-autocomplete ref="searchInput" label="Search Grenade Mods" :items="allPerkNames" v-model="selectedPerk"
             @change="scrollToPerk" solo clearable color="#60b3e3" class="SearchBar"
