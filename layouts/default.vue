@@ -125,12 +125,14 @@ export default {
 
 .wave-container {
   position: fixed;
-  bottom: 0;
+  /* Make wave stay in place */
+  bottom: -10px;
   left: 0;
   width: 200%;
-  height: 50%; /* Adjust the height of the wave container */
+
   overflow: hidden;
   z-index: 0;
+  
   /* Place wave behind perks */
 }
 
