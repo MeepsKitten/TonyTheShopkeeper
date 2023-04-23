@@ -1047,13 +1047,13 @@
                         {
                             "Firework Shot": {
                                 "description": "Fire fireworks along with your shots",
-                                "details": "* Each firework deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 8 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                                "details": "* Each firework deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 8 seconds\n* Item requires to be unlocked with the key totem to spawn"
                             }
                         },
                         {
                             "Bubble Shot": {
                                 "description": "Shots that hit enemies spawn damaging bubbles nearby",
-                                "details": "* Each bubble deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 3 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                                "details": "* Each bubble deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 3 seconds\n* Item requires to be unlocked with the key totem to spawn"
                             }
                         },
                         {
@@ -1077,7 +1077,7 @@
                         {
                             "Thorn Shot": {
                                 "description": "Fire homing thorns along with your shots that stick to enemies and deal damage over time",
-                                "details": "* Each thorn deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 4 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                                "details": "* Each thorn deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 4 seconds\n* Item requires to be unlocked with the key totem to spawn"
                             }
                         }
                     ],
@@ -1091,7 +1091,7 @@
                         {
                             "Triangle Shot": {
                                 "description": "Fire powerful triangle projectiles along with your shots",
-                                "details": "* Each triangle deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 8 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                                "details": "* Each triangle deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 8 seconds\n* Item requires to be unlocked with the key totem to spawn"
                             }
                         },
                         {
@@ -1103,13 +1103,13 @@
                         {
                             "Spike Strike": {
                                 "description": "Shots cause spikes to erupt from the ground, damaging nearby enemies",
-                                "details": "* Spike strikes deal 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 4 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                                "details": "* Spike strikes deal 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 4 seconds\n* Item requires to be unlocked with the key totem to spawn"
                             }
                         },
                         {
                             "Torpedo Shot": {
                                 "description": "Fire homing torpedos along with your shots",
-                                "details": "* Each torpedo deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 3 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                                "details": "* Each torpedo deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 3 seconds\n* Item requires to be unlocked with the key totem to spawn"
                             }
                         },
                         {
@@ -1260,7 +1260,7 @@
                         {
                             "Fire Strike": {
                                 "description": "Shots bring down powerful fire strikes that damage and burn nearby enemies",
-                                "details": "* Fire strikes deal 100 damage and apply (?) fire stacks\n* Tag: Fire\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 12 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                                "details": "* Fire strikes deal 100 damage and apply (?) fire stacks\n* Tag: Fire\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 12 seconds\n* Item requires to be unlocked with the key totem to spawn"
                             }
                         },
                         {
@@ -1272,7 +1272,7 @@
                         {
                             "Poison Strike": {
                                 "description": "Shots bring down poison strikes that damage and poison nearby enemies",
-                                "details": "* Poison strikes deal 100 damage and apply (?) poison stacks\n* Tag: Poison\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 10 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                                "details": "* Poison strikes deal 100 damage and apply (?) poison stacks\n* Tag: Poison\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 10 seconds\n* Item requires to be unlocked with the key totem to spawn"
                             }
                         },
                         {
@@ -1284,7 +1284,7 @@
                         {
                             "Lightning Strike": {
                                 "description": "Shots bring down lightning strikes that damage and shock nearby enemies",
-                                "details": "* Lightning strikes deal 100 damage and apply (?) lightning stacks\n* Tag: Lightning\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 10 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                                "details": "* Lightning strikes deal 100 damage and apply (?) lightning stacks\n* Tag: Lightning\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 10 seconds\n* Item requires to be unlocked with the key totem to spawn"
                             }
                         },
                         {
@@ -1302,7 +1302,7 @@
                         {
                             "Lightning Storm": {
                                 "description": "Shots create electric storms that deal damage over time",
-                                "details": "* Lightning storms deal 100 damage and apply (?) lightning stacks over a Duration second period\n* Tag: Lightning\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 12 seconds\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn"
+                                "details": "* Lightning storms deal 100 damage and apply (?) lightning stacks over a Duration second period\n* Tag: Lightning\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 12 seconds\n* Item requires to be unlocked with the key totem to spawn"
                             }
                         }
                     ],
@@ -1387,7 +1387,7 @@
                         {
                             "Triple Shot": {
                                 "description": "Chance to fire in a triple shot formation",
-                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the key totem to spawn",
                                 "dmgMod": {
                                     "Minigun": 7.0,
                                     "Blade Launcher": 21.0,
@@ -1409,7 +1409,7 @@
                         {
                             "X Shot": {
                                 "description": "Chance to fire in an X shot formation",
-                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the key totem to spawn",
                                 "dmgMod": {
                                     "Minigun": 3.0,
                                     "Blade Launcher": 9.0,
@@ -1435,7 +1435,7 @@
                         {
                             "Square Shot": {
                                 "description": "Chance to fire in a square shot formation",
-                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the key totem to spawn",
                                 "dmgMod": {
                                     "Minigun": 3.0,
                                     "Blade Launcher": 9.0,
@@ -1502,7 +1502,7 @@
                         {
                             "Homing Shot": {
                                 "description": "Chance for shots to home towards enemies",
-                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the [[Totems#Key_Totem|key totem]] to spawn",
+                                "details": "\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the key totem to spawn",
                                 "dmgMod": {
                                     "Minigun": 10.0,
                                     "Blade Launcher": 30.0,
@@ -1582,6 +1582,252 @@
                         }
                     ],
                     "Legendary": [],
+                    "Greed": []
+                }
+            }
+        },
+        "gmods": {
+            "pools": {
+                "Critical": {
+                    "Rare": [
+                        {
+                            "Crit Grenade": {
+                                "description": "Increased grenade critical hit chance",
+                                "details": "* Grenade critical hit chance increased by 20%\n* Tag: Critical\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        }
+                    ],
+                    "Epic": [],
+                    "Legendary": [],
+                    "Greed": []
+                },
+                "Damage": {
+                    "Rare": [
+                        {
+                            "Spiral Grenade": {
+                                "description": "Grenades deal more damage but move in spiral patterns",
+                                "details": "* Damage increased by 25% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Bigger Boom": {
+                                "description": "Grenades have a larger explosion radius",
+                                "details": "* Grenades have a 50% larger explosion radius\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Chaotic Grenade": {
+                                "description": "Grenades deal more damage but move in random patterns",
+                                "details": "* Damage increased by 25% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Big Grenade": {
+                                "description": "Grenades are larger and deal more damage but move more slowly",
+                                "details": "* Grenades are 33% larger and deal 33% more damage (+(?) damage) but move 15% more slowly\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Heavy Grenade": {
+                                "description": "Grenades deal more damage but are heavier",
+                                "details": "* Greandes deal 33% more damage (+(?) damage) but are 25% heavier\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Glue Grenade": {
+                                "description": "Grenades stick to enemies and deal more damage but have a delayed explosion",
+                                "details": "* Damage increased by 33% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Pairs well with Aura Grenade. Delay is one second"
+                            }
+                        },
+                        {
+                            "Snake Grenade": {
+                                "description": "Grenades deal more damage but move in snakelike patterns",
+                                "details": "* Damage increased by 25% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Imploding Grenade": {
+                                "description": "Grenades deal more damage but have a smaller explosion radius",
+                                "details": "* Grenades deal 100% more damage (+(?) damage) but have a 20% smaller explosion radius\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Debuff scaling: Hyperbolic"
+                            }
+                        }
+                    ],
+                    "Epic": [
+                        {
+                            "Aura Grenade": {
+                                "description": "Grenades are surrounded by auras that deal constant damage",
+                                "details": "* Auras deal 33 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Spark Explosion": {
+                                "description": "Grenades explode into a burst of damaging sparks",
+                                "details": "* Each spark deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 3 seconds\n* Each activation spawns 10-12 sparks that deal 50 damage a tick"
+                            }
+                        },
+                        {
+                            "Bubble Blast": {
+                                "description": "Grenades explode into damaging bubbles",
+                                "details": "* Each bubble deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 3 seconds"
+                            }
+                        },
+                        {
+                            "Damage Grenade": {
+                                "description": "Grenades deal more damage",
+                                "details": "* Damage increased by 75% (+(?) damage)\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Firework Explosion": {
+                                "description": "Grenades explode into fireworks",
+                                "details": "* Each firework deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 8 seconds\n* Item requires to be unlocked with the key totem to spawn"
+                            }
+                        },
+                        {
+                            "Thorn Explosion": {
+                                "description": "Grenades explode into homing thorns that stick to enemies and deal damage over time",
+                                "details": "* Each thorn deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 12 seconds"
+                            }
+                        },
+                        {
+                            "Dagger Blast": {
+                                "description": "Grenades explode into clusters of daggers",
+                                "details": "* Each dagger deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 3 seconds\n* Despite what it says, daggers do 100 damage per hit. Each dagger blast launches out 10 daggers"
+                            }
+                        }
+                    ],
+                    "Legendary": [
+                        {
+                            "Ultra Mushroom": {
+                                "description": "Grenades grow gigantic explosive mushrooms when exploding",
+                                "details": "* Mushrooms deal 100 damage when exploding\n* Spawn weight: 0.01\n* Buff scaling: Linear\n* Cooldown: 12 seconds\n* the Ultra Mushrooms explode into smaller mushrooms\n* Item requires to be unlocked with the key totem to spawn"
+                            }
+                        },
+                        {
+                            "Crystal Strike": {
+                                "description": "Grenades explode into crystal strikes",
+                                "details": "* Crystal strikes deal 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 8 seconds\n* Item requires to be unlocked with the key totem to spawn"
+                            }
+                        },
+                        {
+                            "Spike Strike": {
+                                "description": "Grenades explode into spike strikes",
+                                "details": "* Spike strikes deal 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 6 seconds\n* Item requires to be unlocked with the key totem to spawn"
+                            }
+                        },
+                        {
+                            "Spinning Blade": {
+                                "description": "Grenades explode into spinning blades",
+                                "details": "* Each blade deals 100 damage per second\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 12 seconds\n* Each activation creates on large, homing saw projectile that does 25 per level damage per second"
+                            }
+                        },
+                        {
+                            "Crystal Barrage": {
+                                "description": "Grenades explode into crystal barrages",
+                                "details": "* Crystal barrages deal 100 damage over a Duration second period\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 10 seconds\n* Crystal barrages are spheres that have crystals rain inside them"
+                            }
+                        },
+                        {
+                            "Energy Ring": {
+                                "description": "Grenades explode into damaging energy rings",
+                                "details": "* Energy rings deal 100 damage on each hit\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 8 seconds\n* Note is misleading, it's actually 25 per level damage per tick that the ring is touching the enemy, so it could easily hit one enemy multiple times\n* Item requires to be unlocked with the key totem to spawn"
+                            }
+                        },
+                        {
+                            "Spore Explosion": {
+                                "description": "Grenades grow explosive mushrooms when exploding",
+                                "details": "* Mushrooms deal 100 damage and apply (?) poison stacks when exploding\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 12 seconds"
+                            }
+                        },
+                        {
+                            "Bomb Explosion": {
+                                "description": "Grenades explode into clusters of bombs",
+                                "details": "* Each bomb deals 100 damage\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 6 seconds"
+                            }
+                        }
+                    ],
+                    "Greed": []
+                },
+                "Elemental": {
+                    "Rare": [],
+                    "Epic": [],
+                    "Legendary": [
+                        {
+                            "Fire Explosion": {
+                                "description": "Grenades explode into fire damage areas",
+                                "details": "* Fire damage areas apply (?) fire stacks over a Duration second period\n* Tag: Fire\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 10 seconds"
+                            }
+                        },
+                        {
+                            "Poison Explosion": {
+                                "description": "Grenades explode into poison damage areas",
+                                "details": "* Poison damage areas apply (?) poison stacks over a Duration second period\n* Tag: Poison\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 6 seconds"
+                            }
+                        },
+                        {
+                            "Ice Explosion": {
+                                "description": "Grenades explode into ice damage areas",
+                                "details": "* Ice damage areas apply (?) ice stacks over a Duration second period\n* Tag: Ice\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 12 seconds"
+                            }
+                        },
+                        {
+                            "Lightning Explosion": {
+                                "description": "Grenades explode into lightning damage areas",
+                                "details": "* Lightning damage areas apply (?) lightning stacks over a Duration second period\n* Tag: Lightning\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 8 seconds"
+                            }
+                        }
+                    ],
+                    "Greed": []
+                },
+                "Luck": {
+                    "Rare": [],
+                    "Epic": [
+                        {
+                            "Triple Grenade": {
+                                "description": "Chance to throw 3 grenades at once",
+                                "details": "* 25% chance to throw 3 grenades at once\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic\n* Item requires to be unlocked with the key totem to spawn"
+                            }
+                        },
+                        {
+                            "Layered Grenade": {
+                                "description": "Chance for grenades to explode twice",
+                                "details": "* 33% chance for grenades to explode twice\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        }
+                    ],
+                    "Legendary": [],
+                    "Greed": []
+                },
+                "Skill": {
+                    "Rare": [],
+                    "Epic": [
+                        {
+                            "Grenadier": {
+                                "description": "Gain extra uses of your grenade",
+                                "details": "* Gain 1 extra uses of your grenade\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        }
+                    ],
+                    "Legendary": [
+                        {
+                            "Clone Explosion": {
+                                "description": "Grenades spawn more grenades when exploding",
+                                "details": "* Grenades spawn 1 more grenades when exploding\n* Spawn weight: 1.0\n* Buff scaling: Linear"
+                            }
+                        },
+                        {
+                            "Homing Grenade": {
+                                "description": "Grenades lose speed but home towards enemies",
+                                "details": "* Grenades home towards enemies with 50% speed\n* Spawn weight: 1.0\n* Buff scaling: Hyperbolic"
+                            }
+                        },
+                        {
+                            "Black Hole": {
+                                "description": "Grenades explode into black holes that suck enemies in and destroy their projectiles",
+                                "details": "* Black holes have a 25% larger radius\n* Spawn weight: 1.0\n* Buff scaling: Linear\n* Cooldown: 20 seconds\n* Cryptic note..."
+                            }
+                        }
+                    ],
                     "Greed": []
                 }
             }
