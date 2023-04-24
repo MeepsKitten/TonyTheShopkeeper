@@ -7,11 +7,11 @@
         </v-avatar>
       </v-card-title>
       <v-card-text class="text-center">
-        <p class="namelabel">{{ at }}</p>
+        <p class="namelabel">{{ name }}</p>
         <p>{{ bio }}</p>
         <a :href="link">
           <v-btn text x-small :style="{ }">
-            <v-icon left>mdi-twitter</v-icon>{{ name }}
+            <v-icon left>mdi-twitter</v-icon>{{ at }}
           </v-btn>
         </a>       
       </v-card-text>
