@@ -37,7 +37,7 @@ export default {
       person2: {
         name: 'Meeps',
         bio: 'I built this website',
-        avatar: 'https://pbs.twimg.com/profile_images/1574594656137924608/o8YmvT9z_400x400.jpg',
+        avatar: '/meeps.JPG',
         link: 'https://twitter.com/MeepsKitten',
         at: '@MeepsKitten'
       },
