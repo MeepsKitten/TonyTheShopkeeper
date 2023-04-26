@@ -19,7 +19,7 @@
       <v-toolbar-title>{{ title }}</v-toolbar-title>
       <v-spacer></v-spacer>
       <v-select class="version-dropdown" :items="versions" label="Select Game Version"
-        v-model="selectedVersion"></v-select>
+        v-model="selectedVersion" @input="onVersionChange($event)"></v-select>
     </v-app-bar>
     <v-main>
       <div class="wave-container">
@@ -83,19 +83,49 @@ export default {
   },
   provide() {
     return {
-      selectedVersion: computed(() => this.selectedVersion)
+      selectedVersion: computed(() => this.selectedVersion),
+      selectedData: computed(() => this.gameinfo)
     };
   },
 
-  created() {
+  mounted() {
     // Fetch data when the layout is mounted
     // Use the imported data directly
-    this.versions = Object.keys(data);
-    this.gameinfo = data;
+    this.versions = Object.keys(data).sort((b, a) => {
+      return a.localeCompare(b, undefined, { numeric: true });
+    });
+    
+    // Check if the stored version exists in the available versions
     if (this.versions.length > 0) {
+      // Use the index 0 if the stored version doesn't exist
       this.selectedVersion = this.versions[0];
-      //this.onVersionChange();
     }
+
+    // Load the game info for the selected version
+    this.loadGameInfo();
+  },
+
+  methods: {
+    // Method to load game info based on the selected version
+    loadGameInfo() {
+      if (this.selectedVersion && data.hasOwnProperty(this.selectedVersion)) {
+        // Get the game info for the selected version
+        this.gameinfo = data[this.selectedVersion];
+        //log
+        console.log(this.selectedVersion);
+      }
+    },
+    // Method to handle version selection change
+    onVersionChange(newVersion) {
+      // Update the selected version
+      this.selectedVersion = newVersion;
+
+      // Store the selected version in localStorage
+      localStorage.setItem('selectedVersion', newVersion);
+
+      // Load the game info for the selected version
+      this.loadGameInfo();
+    },
   },
 }
 </script>

@@ -46,17 +46,10 @@
 import data from '~/assets/data/crab-data.json';
 export default {
 
-    inject: ['selectedVersion'],
-
-    created() {
-        //log the selected version
-
-        this.perksData = data[this.selectedVersion];
-    },
+    inject: ['selectedVersion' , 'selectedData'],
 
     data() {
         return {
-            perksData: null,
             isLoading: false,
             selectedPerk: null,
             activePanels: [],
@@ -77,6 +70,9 @@ export default {
                 }
             }
             return perkNames;
+        },
+        perksData() {
+            return this.selectedData;
         },
     },
     methods: {

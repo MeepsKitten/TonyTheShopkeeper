@@ -63,12 +63,8 @@
 import data from '~/assets/data/crab-data.json';
 export default {
 
-    inject: ['selectedVersion'],
+    inject: ['selectedVersion' , 'selectedData'],
 
-    created() {
-        this.perksData = data[this.selectedVersion];
-
-    },
     mounted() {
         // Update clientReady to true in the mounted hook
         this.clientReady = true;
@@ -88,7 +84,6 @@ export default {
 
     data() {
         return {
-            perksData: null,
             isLoading: false,
             selectedPerk: null,
             activePanels: [],
@@ -138,6 +133,9 @@ export default {
             }
             // Convert the set to an array and return it
             return Array.from(weaponNamesSet);
+        },
+        perksData() {
+            return this.selectedData;
         },
     },
     watch: {
