@@ -4,38 +4,39 @@
             <h1>Perks</h1>
         </div>
         <v-autocomplete ref="searchInput" label="Search Perks" :items="allPerkNames" v-model="selectedPerk"
-            @change="scrollToPerk" solo clearable color="#60b3e3" class="SearchBar"
-            append-icon="mdi-magnify"></v-autocomplete>
-        <v-expansion-panels v-if="perksData" multiple v-model="activePanels">
+            @update:model-value="scrollToPerk" clearable color="#60b3e3" class="SearchBar" variant="solo">
+        </v-autocomplete>
+        <v-expansion-panels v-if="perksData" multiple v-model="activePanels" class="expansions">
             <v-expansion-panel v-for="(perksByRarity, pool) in perksData.perks.pools" :key="pool" :ref="pool">
-                <v-expansion-panel-header class="pool-header">{{ pool }}</v-expansion-panel-header>
-                <v-expansion-panel-content>
+                <v-expansion-panel-title class="pool-header">
+                    {{ pool }}
+                </v-expansion-panel-title>
+                <v-expansion-panel-text>
                     <div v-for="(perks, rarity) in perksByRarity" :key="rarity">
-                        <v-expansion-panels multiple>
-                            <v-expansion-panel v-for="perkObj in perks" :key="Object.keys(perkObj)[0]"
-                                :class="getRarityGlowClass(rarity)" :id="sanitizeId(Object.keys(perkObj)[0])">
-                                <v-expansion-panel-header class="perk-header" :ref="Object.keys(perkObj)[0]">
-                                    {{ Object.keys(perkObj)[0] }}
-                                </v-expansion-panel-header>
-                                <v-expansion-panel-content>
-                                    <!-- Display formatted perk description -->
-                                    <div v-if="perkObj[Object.keys(perkObj)[0]].description"
-                                        v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].description, true, 'Description', rarity)">
-                                    </div>
-                                    <!-- Display formatted perk details -->
-                                    <div v-if="perkObj[Object.keys(perkObj)[0]].details"
-                                        v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].details, true, 'Details', rarity)">
-                                    </div>
-                                </v-expansion-panel-content>
-
-
-                            </v-expansion-panel>
-                        </v-expansion-panels>
+                        <template v-if="perks.length">
+                            <v-expansion-panels multiple variant="popout" style="margin-top: 20px; margin-bottom: 20px;">
+                                <v-expansion-panel v-for="perkObj in perks" :key="Object.keys(perkObj)[0]"
+                                    :class="getRarityGlowClass(rarity)" :id="sanitizeId(Object.keys(perkObj)[0])">
+                                    <v-expansion-panel-title class="perk-header" :ref="Object.keys(perkObj)[0]">
+                                        {{ Object.keys(perkObj)[0] }}
+                                    </v-expansion-panel-title>
+                                    <v-expansion-panel-text>
+                                        <!-- Display formatted perk description -->
+                                        <div v-if="perkObj[Object.keys(perkObj)[0]].description"
+                                            v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].description, true, 'Description', rarity)">
+                                        </div>
+                                        <!-- Display formatted perk details -->
+                                        <div v-if="perkObj[Object.keys(perkObj)[0]].details"
+                                            v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].details, true, 'Details', rarity)">
+                                        </div>
+                                    </v-expansion-panel-text>
+                                </v-expansion-panel>
+                            </v-expansion-panels>
+                        </template>
                     </div>
-                </v-expansion-panel-content>
+                </v-expansion-panel-text>
             </v-expansion-panel>
         </v-expansion-panels>
-        <!-- Navigation links -->
     </div>
 </template>
   
@@ -43,20 +44,13 @@
   
   
 <script>
-import data from '~/assets/data/crab-data.json';
 export default {
 
-    inject: ['selectedVersion'],
+    inject: ['selectedVersion' , 'selectedData'],
 
-    created() {
-        //log the selected version
-
-        this.perksData = data[this.selectedVersion];
-    },
 
     data() {
         return {
-            perksData: null,
             isLoading: false,
             selectedPerk: null,
             activePanels: [],
@@ -78,6 +72,9 @@ export default {
             }
             return perkNames;
         },
+        perksData() {
+            return this.selectedData.value;
+        },
     },
     methods: {
         sanitizeId(perkName) {
@@ -86,6 +83,7 @@ export default {
         },
 
         scrollToPerk(perkName) {
+            console.log('scrollToPerk', perkName);
             if (!perkName || !this.perksData) return;
 
             // Determine the pool and panel index containing the perk
@@ -115,7 +113,7 @@ export default {
 
                     if (perkElement) {
                         // Calculate the top position of the perk element with an offset (e.g., 50 pixels)
-                        const topPosition = perkElement.getBoundingClientRect().top + window.pageYOffset - 500;
+                        const topPosition = perkElement.getBoundingClientRect().top + window.pageYOffset - 100;
 
                         // Scroll to the adjusted position
                         window.scrollTo({ top: topPosition, behavior: 'smooth' });
@@ -130,7 +128,9 @@ export default {
                     } else {
                         console.log('Could not find perk element:', perkName);
                     }
-                    this.$refs.searchInput.$refs.input.blur();
+                    if (this.$refs.searchInput.$refs.input) {
+                this.$refs.searchInput.$refs.input.blur();
+            }
                 }, 400);
             });
         },
@@ -172,7 +172,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 @keyframes flashing {
     0% {
         opacity: 1;
@@ -185,6 +185,14 @@ export default {
     100% {
         opacity: 1;
     }
+}
+
+.expansions {
+    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
 }
 
 .flash-glow {
@@ -235,24 +243,24 @@ export default {
 
 .perk-card {
     border-radius: 3px;
-    margin: 13px;
+    
 }
 
 
 .rarity-rare {
-    box-shadow: 0 0 17px 1px blue, inset 0 0 2px 1px blue;
+    box-shadow: 0 0 15px -1px blue;
 }
 
 .rarity-epic {
-    box-shadow: 0 0 17px 1px purple, inset 0 0 2px 1px purple;
+    box-shadow: 0 0 15px -1px purple;
 }
 
 .rarity-legendary {
-    box-shadow: 0 0 17px 1px yellow, inset 0 0 2px 1px yellow;
+    box-shadow: 0 0 15px -1px yellow;
 }
 
 .rarity-greed {
-    box-shadow: 0 0 17px 1px red, inset 0 0 2px 1px red;
+    box-shadow: 0 0 15px -1px red;
 }
 
 .v-expansion-panel.perk-card::after {
@@ -279,8 +287,8 @@ export default {
 </style>
 
 <style>
-.SearchBar .v-input__slot {
-    background-color: #60b3e3 !important;
+.SearchBar .v-input__control {
+    
     width: 70%;
     margin: auto;
 }

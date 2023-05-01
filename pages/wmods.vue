@@ -4,10 +4,9 @@
             <h1>Weapon Mods</h1>
         </div>
         <v-autocomplete ref="searchInput" label="Search Weapon Mods" :items="allPerkNames" v-model="selectedPerk"
-            @change="scrollToPerk" solo clearable color="white" class="SearchBar"
-            append-icon="mdi-magnify"></v-autocomplete>
-        <v-combobox label="Select Weapons" :items="allWeaponNames" v-model="selectedWeapons" solo chips clearable
-            color="white" class="wmodsBar" multiple append-icon="mdi-pistol">
+            @update:model-value="scrollToPerk" variant="solo" clearable color="#60b3e3" class="SearchBar"></v-autocomplete>
+        <v-combobox label="Select Weapons" :items="allWeaponNames" v-model="selectedWeapons" variant="solo" chips clearable
+            color="#60b3e3" class="wmodsBar" multiple >
             <!-- Custom chip slot -->
             <template v-slot:selection="{ item, index, selectItem }">
                 <v-chip class="custom-chip" :key="JSON.stringify(item)" size="x-small" color="#60b3e3">
@@ -15,41 +14,46 @@
                 </v-chip>
             </template>>
         </v-combobox>
-        <v-expansion-panels v-if="perksData" multiple v-model="activePanels">
+        <v-expansion-panels v-if="perksData" multiple v-model="activePanels" class="expansions">
             <v-expansion-panel v-for="(perksByRarity, pool) in perksData.wmods.pools" :key="pool" :ref="pool">
-                <v-expansion-panel-header class="pool-header">{{ pool }}</v-expansion-panel-header>
-                <v-expansion-panel-content>
+                <v-expansion-panel-title class="pool-header">
+                    {{ pool }}
+                </v-expansion-panel-title>
+                <v-expansion-panel-text>
                     <div v-for="(perks, rarity) in perksByRarity" :key="rarity">
-                        <v-expansion-panels multiple>
-                            <v-expansion-panel v-for="perkObj in perks" :key="Object.keys(perkObj)[0]"
-                                :class="getRarityGlowClass(rarity)" :id="sanitizeId(Object.keys(perkObj)[0])">
-                                <v-expansion-panel-header class="perk-header" :ref="Object.keys(perkObj)[0]">
-                                    {{ Object.keys(perkObj)[0] }}
-                                </v-expansion-panel-header>
-                                <v-expansion-panel-content>
-                                    <!-- Display formatted perk description -->
-                                    <div v-if="perkObj[Object.keys(perkObj)[0]].description"
-                                        v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].description, true, 'Description', rarity)">
-                                    </div>
-                                    <!-- Display chips for selected weapons with dmgMod -->
-                                    <div
-                                        v-if="clientReady && perkObj[Object.keys(perkObj)[0]].dmgMod && selectedWeapons.length">
-                                        <v-chip v-for="weapon in sortedWeapons(perkObj[Object.keys(perkObj)[0]].dmgMod)"
-                                            :key="weapon" v-if="perkObj[Object.keys(perkObj)[0]].dmgMod[weapon]"
-                                            :style="{ background: calculateChipColor(perkObj[Object.keys(perkObj)[0]].dmgMod[weapon], perkObj[Object.keys(perkObj)[0]].dmgMod) }"
-                                            class="dmgmod-chip" size="x-small">
-                                            {{ weapon }}: {{ perkObj[Object.keys(perkObj)[0]].dmgMod[weapon] }}%
-                                        </v-chip>
-                                    </div>
-                                    <!-- Display formatted perk details -->
-                                    <div v-if="perkObj[Object.keys(perkObj)[0]].details"
-                                        v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].details, true, 'Details', rarity)">
-                                    </div>
-                                </v-expansion-panel-content>
-                            </v-expansion-panel>
-                        </v-expansion-panels>
+                        <template v-if="perks.length">
+                            <v-expansion-panels multiple variant="popout" style="margin-top: 20px; margin-bottom: 20px;">
+                                <v-expansion-panel v-for="perkObj in perks" :key="Object.keys(perkObj)[0]"
+                                    :class="getRarityGlowClass(rarity)" :id="sanitizeId(Object.keys(perkObj)[0])">
+                                    <v-expansion-panel-title class="perk-header" :ref="Object.keys(perkObj)[0]">
+                                        {{ Object.keys(perkObj)[0] }}
+                                    </v-expansion-panel-title>
+                                    <v-expansion-panel-text>
+                                        <!-- Display formatted perk description -->
+                                        <div v-if="perkObj[Object.keys(perkObj)[0]].description"
+                                            v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].description, true, 'Description', rarity)">
+                                        </div>
+                                        <!-- Display chips for selected weapons with dmgMod -->
+                                        <div
+                                            v-if="clientReady && perkObj[Object.keys(perkObj)[0]].dmgMod && selectedWeapons.length">
+                                            <v-chip
+                                                v-for="weapon in getSortedWeapons(perkObj[Object.keys(perkObj)[0]].dmgMod)"
+                                                :key="weapon"
+                                                :style="{ background: calculateChipColor(perkObj[Object.keys(perkObj)[0]].dmgMod[weapon], perkObj[Object.keys(perkObj)[0]].dmgMod) }"
+                                                class="dmgmod-chip" size="x-small">
+                                                {{ weapon }}: {{ perkObj[Object.keys(perkObj)[0]].dmgMod[weapon] }}%
+                                            </v-chip>
+                                        </div>
+                                        <!-- Display formatted perk details -->
+                                        <div v-if="perkObj[Object.keys(perkObj)[0]].details"
+                                            v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].details, true, 'Details', rarity)">
+                                        </div>
+                                    </v-expansion-panel-text>
+                                </v-expansion-panel>
+                            </v-expansion-panels>
+                        </template>
                     </div>
-                </v-expansion-panel-content>
+                </v-expansion-panel-text>
             </v-expansion-panel>
         </v-expansion-panels>
         <!-- Navigation links -->
@@ -60,15 +64,10 @@
   
   
 <script>
-import data from '~/assets/data/crab-data.json';
 export default {
 
-    inject: ['selectedVersion'],
+    inject: ['selectedVersion', 'selectedData'],
 
-    created() {
-        this.perksData = data[this.selectedVersion];
-
-    },
     mounted() {
         // Update clientReady to true in the mounted hook
         this.clientReady = true;
@@ -88,7 +87,6 @@ export default {
 
     data() {
         return {
-            perksData: null,
             isLoading: false,
             selectedPerk: null,
             activePanels: [],
@@ -97,13 +95,6 @@ export default {
         };
     },
     computed: {
-        sortedWeapons() {
-            return (perkDmgMod) => {
-                return this.selectedWeapons
-                    .filter(weapon => perkDmgMod[weapon]) // Filter out weapons that don't have dmgMod value
-                    .sort((a, b) => perkDmgMod[b] - perkDmgMod[a]); // Sort in descending order based on dmgMod value
-            };
-        },
         allPerkNames() {
             // Create an array of all perk names
             const perkNames = [];
@@ -139,6 +130,9 @@ export default {
             // Convert the set to an array and return it
             return Array.from(weaponNamesSet);
         },
+        perksData() {
+            return this.selectedData.value;
+        },
     },
     watch: {
         // Save selected weapons to localStorage whenever there is a change
@@ -153,41 +147,47 @@ export default {
         }
     },
     methods: {
+        getSortedWeapons(perkDmgMod) {
+            console.log('getSortedWeapons is called:', perkDmgMod); // Debugging information
+            return this.selectedWeapons
+                .filter(weapon => perkDmgMod[weapon]) // Filter out weapons that don't have dmgMod value
+                .sort((a, b) => perkDmgMod[b] - perkDmgMod[a]); // Sort in descending order based on dmgMod value
+        },
         sanitizeId(perkName) {
             // Remove spaces and special characters to create a valid ID
             return perkName.replace(/[^a-zA-Z0-9]/g, '_');
         },
         calculateChipColor(value, dmgMod) {
-    // Filter dmgMod to include only the selected weapons
-    const filteredDmgMod = this.selectedWeapons.reduce((acc, weapon) => {
-      if (dmgMod[weapon]) {
-        acc[weapon] = dmgMod[weapon];
-      }
-      return acc;
-    }, {});
+            // Filter dmgMod to include only the selected weapons
+            const filteredDmgMod = this.selectedWeapons.reduce((acc, weapon) => {
+                if (dmgMod[weapon]) {
+                    acc[weapon] = dmgMod[weapon];
+                }
+                return acc;
+            }, {});
 
-    // Extract values from filteredDmgMod and calculate min and max
-    const values = Object.values(filteredDmgMod);
-    const min = Math.min(...values);
-    const max = Math.max(...values);
+            // Extract values from filteredDmgMod and calculate min and max
+            const values = Object.values(filteredDmgMod);
+            const min = Math.min(...values);
+            const max = Math.max(...values);
 
-    // Handle the edge case where all values are the same
-    if (max === min) return '#60b3e3';
+            // Handle the edge case where all values are the same
+            if (max === min) return '#60b3e3';
 
-    // Define the RGB values for the highest and lowest colors
-    const highestColor = { r: 96, g: 179, b: 227 }; // RGB values for #60b3e3
-    const lowestColor = { r: 42, g: 42, b: 42 }; // RGB values for #1E1E1E
+            // Define the RGB values for the highest and lowest colors
+            const highestColor = { r: 96, g: 179, b: 227 }; // RGB values for #60b3e3
+            const lowestColor = { r: 42, g: 42, b: 42 }; // RGB values for #1E1E1E
 
-    // Normalize the value to range [0, 1]
-    const percentage = (value - min) / (max - min);
+            // Normalize the value to range [0, 1]
+            const percentage = (value - min) / (max - min);
 
-    // Interpolate the RGB values based on the percentage
-    const r = Math.round(lowestColor.r + (highestColor.r - lowestColor.r) * percentage);
-    const g = Math.round(lowestColor.g + (highestColor.g - lowestColor.g) * percentage);
-    const b = Math.round(lowestColor.b + (highestColor.b - lowestColor.b) * percentage);
+            // Interpolate the RGB values based on the percentage
+            const r = Math.round(lowestColor.r + (highestColor.r - lowestColor.r) * percentage);
+            const g = Math.round(lowestColor.g + (highestColor.g - lowestColor.g) * percentage);
+            const b = Math.round(lowestColor.b + (highestColor.b - lowestColor.b) * percentage);
 
-    return `rgb(${r}, ${g}, ${b})`;
-  },
+            return `rgb(${r}, ${g}, ${b})`;
+        },
         scrollToPerk(perkName) {
             if (!perkName || !this.perksData) return;
 
@@ -218,7 +218,7 @@ export default {
 
                     if (perkElement) {
                         // Calculate the top position of the perk element with an offset (e.g., 50 pixels)
-                        const topPosition = perkElement.getBoundingClientRect().top + window.pageYOffset - 500;
+                        const topPosition = perkElement.getBoundingClientRect().top + window.pageYOffset - 100;
 
                         // Scroll to the adjusted position
                         window.scrollTo({ top: topPosition, behavior: 'smooth' });
@@ -276,6 +276,14 @@ export default {
 
 
 <style scoped>
+.expansions {
+    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
+}
+
 @keyframes flashing {
     0% {
         opacity: 1;
@@ -339,24 +347,23 @@ export default {
 
 .perk-card {
     border-radius: 3px;
-    margin: 13px;
 }
 
 
 .rarity-rare {
-    box-shadow: 0 0 17px 1px blue, inset 0 0 2px 1px blue;
+    box-shadow: 0 0 15px -1px blue;
 }
 
 .rarity-epic {
-    box-shadow: 0 0 17px 1px purple, inset 0 0 2px 1px purple;
+    box-shadow: 0 0 15px -1px purple;
 }
 
 .rarity-legendary {
-    box-shadow: 0 0 17px 1px yellow, inset 0 0 2px 1px yellow;
+    box-shadow: 0 0 15px -1px yellow;
 }
 
 .rarity-greed {
-    box-shadow: 0 0 17px 1px red, inset 0 0 2px 1px red;
+    box-shadow: 0 0 15px -1px red;
 }
 
 .v-expansion-panel.perk-card::after {
@@ -366,7 +373,7 @@ export default {
     /* If the line is caused by a background */
 }
 
-.v-expansion-panel-header {
+.v-expansion-panel-title {
     user-select: text;
     /* Allow text selection */
 }
@@ -390,15 +397,21 @@ export default {
 </style>
 
 <style>
-.SearchBar .v-input__slot {
-    background-color: #60b3e3 !important;
+.SearchBar .v-input__control {
     width: 70%;
     margin: auto;
 }
 
-.wmodsBar .v-input__slot {
-    background-color: "primary" !important;
+.wmodsBar .v-input__control {
     height: 100%;
+    width: 80%;
+    margin: auto;
+}
+
+.wmodsBar .v-input__control .v-field {
+    color: #60b3e3 !important;
+
 }
 </style>
   
+<style></style>
