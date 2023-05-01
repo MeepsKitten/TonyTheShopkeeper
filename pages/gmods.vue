@@ -4,35 +4,36 @@
             <h1>Grenade Mods</h1>
         </div>
         <v-autocomplete ref="searchInput" label="Search Grenade Mods" :items="allPerkNames" v-model="selectedPerk"
-            @change="scrollToPerk" solo clearable color="#60b3e3" class="SearchBar"
-            append-icon="mdi-magnify"></v-autocomplete>
-        <v-expansion-panels v-if="perksData" multiple v-model="activePanels">
+            @update:model-value="scrollToPerk" clearable color="#60b3e3" class="SearchBar" variant="solo"></v-autocomplete>
+        <v-expansion-panels v-if="perksData" multiple v-model="activePanels" class="expansions">
             <v-expansion-panel v-for="(perksByRarity, pool) in perksData.gmods.pools" :key="pool" :ref="pool">
-                <v-expansion-panel-header class="pool-header">{{ pool }}</v-expansion-panel-header>
-                <v-expansion-panel-content>
+                <v-expansion-panel-title class="pool-header">{{ pool }}</v-expansion-panel-title>
+                <v-expansion-panel-text>
                     <div v-for="(perks, rarity) in perksByRarity" :key="rarity">
-                        <v-expansion-panels multiple>
-                            <v-expansion-panel v-for="perkObj in perks" :key="Object.keys(perkObj)[0]"
-                                :class="getRarityGlowClass(rarity)" :id="sanitizeId(Object.keys(perkObj)[0])">
-                                <v-expansion-panel-header class="perk-header" :ref="Object.keys(perkObj)[0]">
-                                    {{ Object.keys(perkObj)[0] }}
-                                </v-expansion-panel-header>
-                                <v-expansion-panel-content>
-                                    <!-- Display formatted perk description -->
-                                    <div v-if="perkObj[Object.keys(perkObj)[0]].description"
-                                        v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].description, true, 'Description', rarity)">
-                                    </div>
-                                    <!-- Display formatted perk details -->
-                                    <div v-if="perkObj[Object.keys(perkObj)[0]].details"
-                                        v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].details, true, 'Details', rarity)">
-                                    </div>
-                                </v-expansion-panel-content>
+                        <template v-if="perks.length">
+                            <v-expansion-panels multiple variant="popout" style="margin-top: 20px; margin-bottom: 20px;">
+                                <v-expansion-panel v-for="perkObj in perks" :key="Object.keys(perkObj)[0]"
+                                    :class="getRarityGlowClass(rarity)" :id="sanitizeId(Object.keys(perkObj)[0])">
+                                    <v-expansion-panel-title class="perk-header" :ref="Object.keys(perkObj)[0]">
+                                        {{ Object.keys(perkObj)[0] }}
+                                    </v-expansion-panel-title>
+                                    <v-expansion-panel-text>
+                                        <!-- Display formatted perk description -->
+                                        <div v-if="perkObj[Object.keys(perkObj)[0]].description"
+                                            v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].description, true, 'Description', rarity)">
+                                        </div>
+                                        <!-- Display formatted perk details -->
+                                        <div v-if="perkObj[Object.keys(perkObj)[0]].details"
+                                            v-html="highlightNumbers(perkObj[Object.keys(perkObj)[0]].details, true, 'Details', rarity)">
+                                        </div>
+                                    </v-expansion-panel-text>
 
 
-                            </v-expansion-panel>
-                        </v-expansion-panels>
+                                </v-expansion-panel>
+                            </v-expansion-panels>
+                        </template>
                     </div>
-                </v-expansion-panel-content>
+                </v-expansion-panel-text>
             </v-expansion-panel>
         </v-expansion-panels>
         <!-- Navigation links -->
@@ -43,10 +44,10 @@
   
   
 <script>
-import data from '~/assets/data/crab-data.json';
 export default {
 
     inject: ['selectedVersion' , 'selectedData'],
+
 
     data() {
         return {
@@ -72,7 +73,7 @@ export default {
             return perkNames;
         },
         perksData() {
-            return this.selectedData;
+            return this.selectedData.value;
         },
     },
     methods: {
@@ -111,7 +112,7 @@ export default {
 
                     if (perkElement) {
                         // Calculate the top position of the perk element with an offset (e.g., 50 pixels)
-                        const topPosition = perkElement.getBoundingClientRect().top + window.pageYOffset - 500;
+                        const topPosition = perkElement.getBoundingClientRect().top + window.pageYOffset - 100;
 
                         // Scroll to the adjusted position
                         window.scrollTo({ top: topPosition, behavior: 'smooth' });
@@ -168,7 +169,16 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
+
+.expansions {
+    max-width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
+}
+
 @keyframes flashing {
     0% {
         opacity: 1;
@@ -231,7 +241,6 @@ export default {
 
 .perk-card {
     border-radius: 3px;
-    margin: 13px;
 }
 
 
@@ -258,7 +267,7 @@ export default {
     /* If the line is caused by a background */
 }
 
-.v-expansion-panel-header {
+.v-expansion-panel-title {
     user-select: text;
     /* Allow text selection */
 }
@@ -275,8 +284,7 @@ export default {
 </style>
 
 <style>
-.SearchBar .v-input__slot {
-    background-color: #60b3e3 !important;
+.SearchBar .v-input__control {
     width: 70%;
     margin: auto;
 }

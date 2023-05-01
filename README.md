@@ -1,68 +1,81 @@
-# tony-the-shopkeeper
+# Nuxt 3 + Vuetify 3 Starter
 
-## Build Setup
+![Starter Image](/public/starter.png)
+Nuxt 3 is now stable. Vuetify 3 is now stable. I will be updating this template as we go along. Feel free to open an issue if you have any questions or suggestions.
+This template here will get you up & running with adding the two together :)
+
+## Demo Here
+
+[Online Demo](https://vuetify3nuxt3starter.behonbaker.com)
+
+## How to use
+
+As time passes, I will be updating this template. It will grow with some more pages. It all started with the login & register pages. I may keep a running list of pages added here.
+
+### Pages
+
+<details>
+<summary>Click to see the pages added & planned</summary>
+
+- [x] Login
+- [x] Register
+- [x] Reset Password
+
+</details>
+
+### Run the app
+
+1. Install the deps
 
 ```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+npm install
 ```
 
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
+2. Run the app
 
-## Special Directories
+```bash
+npm run dev
+```
 
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
+### Stuff used
 
-### `assets`
+- NuxtJS
+- Nuxt Icon
+- Sass
+- Vuetify
+- kevinmarrec/nuxt-pwa
+- Vite Plugin Vuetify
 
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
+### Custom Sass File
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
+The `.scss` file that can be found in the `assets` folder have some gradients & other styles. They can be deleted or updated.
 
-### `components`
+### ~~Helpers Folder~~ Utils Folder
 
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
+The ~~helper~~ utils folder contains the custom stuff for the Vuetify plugin
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
+#### Custom Icons - `customIcons.ts`
 
-### `layouts`
+So I switched from the nuxt-icon module to the @iconify/vue component [here](https://docs.iconify.design/icon-components/vue/). It plays better with Vuetify with custom icons
 
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
+Here is a link to the docs for this [Creating a custom iconset](https://next.vuetifyjs.com/en/features/icon-fonts/#creating-a-custom-icon-set)
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+#### Global Defaults - `defaults.ts`
 
-### `pages`
+This file here just set global props on different vuetify components. You can learn more here [Global Configuration](https://next.vuetifyjs.com/en/features/global-configuration/)
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+#### Themes - `themes.ts`
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+This file will hold all the different themes that you want to use in your app. Feel free to add more crazy schemes lol. Learn more here: [Vuetify Themes](https://next.vuetifyjs.com/en/features/theme/)
 
-### `plugins`
+#### Form Rules - Composable
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+I added one composable for form rules. Add more here. You can even try integrating other validation packages like `yup` or `zod`
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+#### Yup & Vee-Validate
 
-### `static`
+I will definitely be switching to vee-validate for dealing with forms.
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
+#### Icons
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
-
-### `store`
-
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+The public folder contains a `favicon` & `icon`. Change these out for your app and be sure to tweak the pwa config inside the `nuxt.config` file to fit your app
